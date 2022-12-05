@@ -7,6 +7,7 @@ use Closure;
 use Filament\Tables;
 use Filament\Widgets\TableWidget as BaseWidget;
 use Illuminate\Database\Eloquent\Builder;
+use Filament\Tables\Columns\TextColumn;
 
 class Expenses extends BaseWidget
 {       
@@ -22,13 +23,26 @@ class Expenses extends BaseWidget
     {
         return [
                 // Tables\Columns\TextColumn::make('user_id'),
-                Tables\Columns\TextColumn::make('amount'),
+                TextColumn::make('id')->rowIndex(),
+                Tables\Columns\TextColumn::make('amount') ->formatStateUsing(fn (string $state): string => __("{$state} ₹")),
                 Tables\Columns\TextColumn::make('description'),
-                Tables\Columns\TextColumn::make('pos_neg'),
+                Tables\Columns\TextColumn::make('pos_neg')
+                    ->formatStateUsing(fn (string $state): string =>  ($state == 1)?  "Debit" : "Credit" )
+                    ->color(function (TextColumn $column): ?string {
+                        $state = $column->getState();
+                 
+                        if ($state == 1) {
+                            return 'danger';
+                        }
+                        return 'success';
+                    })
+                        ->label("Transaction Type"),
                 Tables\Columns\TextColumn::make('created_at')
+                    ->label("Transaction Date")
                     ->dateTime(),
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime(),
+                // Tables\Columns\TextColumn::make('created_at')
+                //      ->label("Transaction Since")
+                //     ->dateTime(),
         ];
     }
 }
