@@ -41,6 +41,7 @@ class ExpenseResource extends Resource
                     ->maxLength(255),
                 
             ]);
+            
     }
 
     public static function table(Table $table): Table
