@@ -21,7 +21,20 @@ class CreditChart extends LineChartWidget
 
         $activeFilter =  ($this->filter) ?? 0;
 
-            $data = Trend::query(Expense::where('pos_neg', 0))
+        $activeFilter =  ($this->filter) ?? 0;
+
+        if($this->filter == 1){
+           $filterByHomeDebit = "1";
+           $filterByColumn = 'home_transaction'; 
+        }else{
+            $filterByHomeDebit = auth()->user()->id;
+            $filterByColumn = 'user_id';
+        }
+
+
+
+
+    $data = Trend::query(Expense::where('pos_neg', 0)->where('user_id', auth()->user()->id)->where($filterByColumn, $filterByHomeDebit))
         ->between(
             start: now()->startOfMonth()->subDay($activeFilter),
             end: now()->endOfMonth(),
@@ -49,6 +62,7 @@ class CreditChart extends LineChartWidget
             7  => 'Last week',
             30  => 'Last month',
             365  => 'This year',
+            1  => 'Recived From Home',
              
         ];
     }
