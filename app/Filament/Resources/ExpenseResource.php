@@ -13,6 +13,11 @@ use Filament\Resources\Table;
 use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Forms\Components\DateTimePicker;
+use Filament\Forms\Components\Toggle;
+use Filament\Tables\Columns\TextColumn;
+
+ 
 
 class ExpenseResource extends Resource
 {
@@ -39,7 +44,14 @@ class ExpenseResource extends Resource
                 Forms\Components\Textarea::make('description')
                     ->required()
                     ->maxLength(255),
-                
+              
+                Forms\Components\DateTimePicker::make('created_at')
+                    ->label('Transaction Date')
+                    ->maxDate(now())  
+                    ->default(now()),
+                Toggle::make('home_transaction')
+                    ->label('Home Transaction'),
+                                
             ]);
             
     }
@@ -48,14 +60,31 @@ class ExpenseResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('user_id'),
-                Tables\Columns\TextColumn::make('amount'),
+                Tables\Columns\TextColumn::make('id')->rowIndex(),
+                Tables\Columns\TextColumn::make('amount') ->formatStateUsing(fn (string $state): string => __("{$state} ₹")),
                 Tables\Columns\TextColumn::make('description'),
-                Tables\Columns\TextColumn::make('pos_neg'),
+                Tables\Columns\TextColumn::make('pos_neg')
+                    ->formatStateUsing(fn (string $state): string =>  ($state == 1)?  "Debit" : "Credit" )
+                    ->color(function (TextColumn $column): ?string {
+                        $state = $column->getState();
+                 
+                        if ($state == 1) {
+                            return 'danger';
+                        }
+                        return 'success';
+                    })
+                        ->label("Transaction Type"),
+                Tables\Columns\TextColumn::make('home_transaction')
+                    ->formatStateUsing(fn (string $state): string => ($state == 0)?  "No" : "Yes"  )
+                    ->label("Home Transaction"),
                 Tables\Columns\TextColumn::make('created_at')
+                    ->label("Transaction Date")
                     ->dateTime(),
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime(),
+
+
+                // Tables\Columns\TextColumn::make('created_at')
+                //      ->label("Transaction Since")
+                //     ->dateTime(),
             ])
             ->filters([
                 //

@@ -15,7 +15,7 @@ class ExpenseOverview extends BaseWidget
         $Creditsum= 0;
         $lastMonth = Carbon::now()->subDay(30);
         $loggedID = auth()->user()->id;
-        $Credit = Expense::where('user_id', $loggedID)->where('pos_neg', 0);    
+        $Credit = Expense::where('user_id', $loggedID)->where('pos_neg', 0)->where('user_id', auth()->user()->id);    
         $Creditsum =   $Credit->sum('amount');
         $CreditamountArr = $Credit->pluck('amount')->toArray();
 
@@ -38,7 +38,7 @@ class ExpenseOverview extends BaseWidget
 
 
             $Debitsum= 0;
-        $Debit = Expense::where('user_id', $loggedID)->where('pos_neg', 1);
+        $Debit = Expense::where('user_id', $loggedID)->where('pos_neg', 1)->where('user_id', auth()->user()->id);
         $Debitsum =   $Debit->sum('amount');
         $DebitamountArr = $Debit->pluck('amount')->toArray();
         $lastMonthSumDebit = $Credit->where('created_at', $lastMonth)->sum('amount');
