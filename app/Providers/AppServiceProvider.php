@@ -31,7 +31,7 @@ class AppServiceProvider extends ServiceProvider
 // Default
 
         
-        FilamentSocialite::setCreateUserCallback(fn (UserContract $oauthUser, $socialite) => $socialite->getUserModelClass()::create([
+        FilamentSocialite::setCreateUserCallback(fn (UserContract $oauthUser, SocialiteUser $socialite) => $socialite->getUserModelClass()::create([
             'name' => $oauthUser->getName(),
             'email' => $oauthUser->getEmail(),
         ]));
