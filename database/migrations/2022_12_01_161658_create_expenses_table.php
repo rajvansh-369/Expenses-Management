@@ -21,6 +21,7 @@ return new class extends Migration
             $table->integer('pos_neg');
             $table->integer('home_transaction')->default(1);
             $table->integer('is_active')->default(1);
+            $table->dateTime('transaction_date');
             $table->timestamps();
         });
     }

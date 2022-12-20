@@ -21,9 +21,15 @@ use Filament\Tables\Columns\TextColumn;
 
 class ExpenseResource extends Resource
 {
-    protected static ?string $model = Expense::class;
+    // protected static ?string $model = Expense::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
+
+
+     public static function getEloquentQuery(): Builder
+        {
+            return parent::getEloquentQuery()->where('user_id',auth()->user()->id);
+        }
 
     public static function form(Form $form): Form
     {
@@ -45,7 +51,7 @@ class ExpenseResource extends Resource
                     ->required()
                     ->maxLength(255),
               
-                Forms\Components\DateTimePicker::make('created_at')
+                Forms\Components\DateTimePicker::make('transaction_date')
                     ->label('Transaction Date')
                     ->maxDate(now())  
                     ->default(now()),
@@ -75,17 +81,18 @@ class ExpenseResource extends Resource
                     })
                         ->label("Transaction Type"),
                 Tables\Columns\TextColumn::make('home_transaction')
-                    ->formatStateUsing(fn (string $state): string => ($state == 0)?  "No" : "Yes"  )
-                    ->label("Home Transaction"),
-                Tables\Columns\TextColumn::make('created_at')
+                    ->formatStateUsing(fn (string $state): string => ($state == 0)?      "No" : "Yes"  )
+                    ->label("Home Transaction")
+                    ,
+                Tables\Columns\TextColumn::make('transaction_date')
                     ->label("Transaction Date")
                     ->dateTime(),
 
 
-                // Tables\Columns\TextColumn::make('created_at')
-                //      ->label("Transaction Since")
-                //     ->dateTime(),
-            ])
+                Tables\Columns\TextColumn::make('created_at')
+                     ->label("Transaction Since")
+                    ->since(),
+            ])->defaultSort('transaction_date', 'desc')
             ->filters([
                 //
             ])
