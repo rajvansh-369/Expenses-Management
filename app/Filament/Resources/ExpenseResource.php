@@ -54,6 +54,7 @@ class ExpenseResource extends Resource
                 Forms\Components\DateTimePicker::make('transaction_date')
                     ->label('Transaction Date')
                     ->maxDate(now())  
+                    ->required()
                     ->default(now()),
                 Toggle::make('home_transaction')
                     ->label('Home Transaction'),
