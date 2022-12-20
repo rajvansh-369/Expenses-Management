@@ -13,6 +13,7 @@ class Expense extends Model
         'amount',
         'description',
         'pos_neg',
+        'transaction_date',
     ];
 
 }
