@@ -6,12 +6,17 @@
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
+        "dutchcodingcompany/filament-socialite": "^0.2.3",
         "filament/filament": "^2.16",
         "flowframe/laravel-trend": "^0.1.1",
         "guzzlehttp/guzzle": "^7.2",
+        "jeffgreco13/filament-breezy": "^1.4",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
-        "laravel/tinker": "^2.7"
+        "laravel/socialite": "^5.5",
+        "laravel/tinker": "^2.7",
+        "owenvoke/blade-fontawesome": "^2.1",
+        "socialiteproviders/google": "^4.1"
     },
     "require-dev": {
         "doctrine/dbal": "^3.5",

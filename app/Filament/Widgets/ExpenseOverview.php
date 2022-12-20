@@ -37,7 +37,7 @@ class ExpenseOverview extends BaseWidget
             }
 
 
-            $Debitsum= 0;
+        $Debitsum= 0;
         $Debit = Expense::where('user_id', $loggedID)->where('pos_neg', 1)->where('user_id', auth()->user()->id);
         $Debitsum =   $Debit->sum('amount');
         $DebitamountArr = $Debit->pluck('amount')->toArray();
@@ -55,13 +55,9 @@ class ExpenseOverview extends BaseWidget
             $pastCalcDebit = (($Creditsum - $lastMonthSumDebit  )/$Creditsum)*100;
             $incrementDebit = 'heroicon-s-trending-down';
             $colorDebit = 'danger';
-
         }
-
-
         $currentBalance = $Creditsum - $Debitsum;
         
-
         return [
             Card::make('Total Credit', $Creditsum)
                 ->description($pastCalcCredit.'%')

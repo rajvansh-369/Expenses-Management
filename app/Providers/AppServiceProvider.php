@@ -4,6 +4,11 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
+
+use DutchCodingCompany\FilamentSocialite\Models\SocialiteUser;
+use Laravel\Socialite\Contracts\User as UserContract;
+use DutchCodingCompany\FilamentSocialite\Facades\FilamentSocialite;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -23,6 +28,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+// Default
+
+        
+        FilamentSocialite::setCreateUserCallback(fn (UserContract $oauthUser, SocialiteUser $socialite) => $socialite->getUserModelClass()::create([
+            'name' => $oauthUser->getName(),
+            'email' => $oauthUser->getEmail(),
+        ]));
     }
 }
