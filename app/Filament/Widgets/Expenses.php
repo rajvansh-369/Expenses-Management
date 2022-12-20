@@ -16,7 +16,7 @@ class Expenses extends BaseWidget
     
     protected function getTableQuery(): Builder
     {
-        return Expense::query()->latest();
+        return Expense::query()->where('user_id', auth()->user()->id)->latest();
     }
 
     protected function getTableColumns(): array
