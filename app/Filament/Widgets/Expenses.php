@@ -38,7 +38,7 @@ class Expenses extends BaseWidget
                     })
                         ->label("Transaction Type"),
                 Tables\Columns\TextColumn::make('home_transaction')
-                        ->formatStateUsing(fn (string $state): string => ($state == 0)?  "No" : "Yes"  )
+                        ->formatStateUsing(fn (string $state): string => ($state == false)?  "No" : "Yes"  )
                         ->label("Home Transaction"),
                 Tables\Columns\TextColumn::make('created_at')
                     ->label("Transaction Date")
