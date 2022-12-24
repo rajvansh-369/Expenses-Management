@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('amount');
             $table->string('description');
             $table->integer('pos_neg');
-            $table->integer('home_transaction')->default(1);
+            $table->boolean('home_transaction');
             $table->integer('is_active')->default(1);
             $table->dateTime('transaction_date');
             $table->timestamps();
