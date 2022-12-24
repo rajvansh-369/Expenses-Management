@@ -42,7 +42,7 @@ class Expenses extends BaseWidget
                         ->label("Home Transaction"),
                 Tables\Columns\TextColumn::make('created_at')
                     ->label("Transaction Date")
-                    ->dateTime(),
+                    ->dateTime('D  M d, Y h:i A'),
                 // Tables\Columns\TextColumn::make('created_at')
                 //      ->label("Transaction Since")
                 //     ->dateTime(),

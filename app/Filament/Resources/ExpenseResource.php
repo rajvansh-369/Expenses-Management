@@ -87,7 +87,7 @@ class ExpenseResource extends Resource
                     ,
                 Tables\Columns\TextColumn::make('transaction_date')
                     ->label("Transaction Date")
-                    ->dateTime(),
+                    ->dateTime('D  M d, Y h:i A'),
 
 
                 Tables\Columns\TextColumn::make('created_at')
