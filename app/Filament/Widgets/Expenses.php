@@ -16,7 +16,7 @@ class Expenses extends BaseWidget
     
     protected function getTableQuery(): Builder
     {
-        return Expense::query()->where('user_id', auth()->user()->id)->latest();
+        return Expense::query()->where('user_id', auth()->user()->id)->orderBy('transaction_date','Desc')->latest();
     }
 
     protected function getTableColumns(): array
@@ -40,12 +40,14 @@ class Expenses extends BaseWidget
                 Tables\Columns\TextColumn::make('home_transaction')
                         ->formatStateUsing(fn (string $state): string => ($state == false)?  "No" : "Yes"  )
                         ->label("Home Transaction"),
-                Tables\Columns\TextColumn::make('created_at')
+                Tables\Columns\TextColumn::make('transaction_date')
                     ->label("Transaction Date")
                     ->dateTime('D  M d, Y h:i A'),
-                // Tables\Columns\TextColumn::make('created_at')
-                //      ->label("Transaction Since")
-                //     ->dateTime(),
+                Tables\Columns\TextColumn::make('created_at')
+                     ->label("Transaction Since")
+                     ->since(),
+
+                     
         ];
     }
 }
