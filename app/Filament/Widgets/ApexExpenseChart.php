@@ -7,6 +7,7 @@ use Flowframe\Trend\Trend;
 use Flowframe\Trend\TrendValue;
 use App\Models\Expense;
 
+
 class ApexExpenseChart extends ApexChartWidget
 {
 
