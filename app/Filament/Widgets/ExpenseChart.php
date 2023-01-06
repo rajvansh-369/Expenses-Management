@@ -12,7 +12,7 @@ class ExpenseChart extends LineChartWidget
 {
     protected static ?int $sort = 2;
     protected static ?string $heading = 'Debit';
-    protected static ?string $pollingInterval = '10s';
+    // protected static ?string $pollingInterval = '10s';
     protected function getData(): array
     {
         // $activeFilter = 0;
