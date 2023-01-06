@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
+        "buildix/timex": "^1.1",
         "dutchcodingcompany/filament-socialite": "^0.2.3",
         "filament/filament": "^2.16",
         "flowframe/laravel-trend": "^0.1.1",
@@ -15,7 +16,6 @@
         "laravel/sanctum": "^3.0",
         "laravel/socialite": "^5.5",
         "laravel/tinker": "^2.7",
-      
         "owenvoke/blade-fontawesome": "^2.1",
         "socialiteproviders/google": "^4.1"
     },

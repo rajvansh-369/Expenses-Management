@@ -22,4 +22,7 @@ class Expense extends Model
         'home_transaction',
     ];
 
+
+    
+
 }
