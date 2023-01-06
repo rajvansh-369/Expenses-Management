@@ -13,58 +13,67 @@ class ExpenseOverview extends BaseWidget
     protected function getCards(): array
     {   
         $Creditsum= 0;
-        $lastMonth = Carbon::now()->subDay(30);
+        // $lastMonth = Carbon::now()->subDay(30);
+        $lastMonth = Carbon::now()->subDay(1)->format('Y-m');
         $loggedID = auth()->user()->id;
         $Credit = Expense::where('user_id', $loggedID)->where('pos_neg', 0)->where('user_id', auth()->user()->id);    
         $Creditsum =   $Credit->sum('amount');
+        $CreditsumCurrentMonth =  Expense::where('user_id', $loggedID)->where('pos_neg', 0)->where('transaction_date', '>',$lastMonth.'-01')->sum('amount');
         $CreditamountArr = $Credit->pluck('amount')->toArray();
 
-        $lastMonthSumCredit = $Credit->where('created_at', $lastMonth)->sum('amount');
         $lastMonthSumCredit = 1;
+        $lastMonthSumCredit = $Credit->where('transaction_date', '<',$lastMonth.'-01')->sum('amount');
 
-            if($lastMonthSumCredit > $Creditsum){
+        // dd("debitSUM  ".$CreditsumCurrentMonth, "Last debitSUM  ".$lastMonthSumCredit );
+        
+            if($lastMonthSumCredit > $CreditsumCurrentMonth){
 
-                $pastCalcCredit = (($Creditsum - $lastMonthSumCredit  )/$lastMonthSumCredit)*100;
+                $pastCalcCredit = (($CreditsumCurrentMonth)/$lastMonthSumCredit)*100;
                 $incrementCredit = 'heroicon-s-trending-down';
                 $colorCredit = 'danger';
 
             }else{
 
-                $pastCalcCredit = (($Creditsum - $lastMonthSumCredit  )/$Creditsum)*100;
+                $pastCalcCredit = (($CreditsumCurrentMonth)/$lastMonthSumCredit)*100;
                 $incrementCredit = 'heroicon-s-trending-up';
                 $colorCredit = 'success';
 
             }
 
+            // ***************************************** D E B i T **********************************
+
 
         $Debitsum= 0;
-        $Debit = Expense::where('user_id', $loggedID)->where('pos_neg', 1)->where('user_id', auth()->user()->id);
+        $Debit = Expense::where('user_id', $loggedID)->where('pos_neg', 1);
         $Debitsum =   $Debit->sum('amount');
+        $DebitsumCurrentMonth =  Expense::where('user_id', $loggedID)->where('pos_neg', 1)->where('transaction_date', '>',$lastMonth.'-01')->sum('amount');
         $DebitamountArr = $Debit->pluck('amount')->toArray();
-        $lastMonthSumDebit = $Credit->where('created_at', $lastMonth)->sum('amount');
         $lastMonthSumDebit = 1;
+        $lastMonthSumDebit = $Debit->where('transaction_date', '<',$lastMonth.'-01')->sum('amount');
 
-        if($lastMonthSumDebit > $Creditsum){
 
-            $pastCalcDebit = (($Creditsum - $lastMonthSumDebit  )/$lastMonthSumDebit)*100;
+        
+        if($lastMonthSumDebit > $DebitsumCurrentMonth){
+
+            $pastCalcDebit = (($DebitsumCurrentMonth)/$lastMonthSumDebit)*100;
             $incrementDebit = 'heroicon-s-trending-up';
-            $colorDebit = 'sucess';
+            $colorDebit = 'success';
 
         }else{
 
-            $pastCalcDebit = (($Creditsum - $lastMonthSumDebit  )/$Creditsum)*100;
+            $pastCalcDebit = (($DebitsumCurrentMonth)/$lastMonthSumDebit)*100;
             $incrementDebit = 'heroicon-s-trending-down';
             $colorDebit = 'danger';
         }
         $currentBalance = $Creditsum - $Debitsum;
         
         return [
-            Card::make('Total Credit', $Creditsum)
+            Card::make('Total Credit', $CreditsumCurrentMonth)
                 ->description($pastCalcCredit.'%')
                 ->chart($CreditamountArr)
                 ->descriptionIcon($incrementCredit)
                 ->color($colorCredit),
-            Card::make('Total Debit',  $Debitsum)
+            Card::make('Total Debit',  $DebitsumCurrentMonth)
                 ->description($pastCalcDebit."%")
                 ->chart($DebitamountArr)
                 ->descriptionIcon($incrementDebit)
