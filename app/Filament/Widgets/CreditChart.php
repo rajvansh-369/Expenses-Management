@@ -12,7 +12,7 @@ class CreditChart extends LineChartWidget
 {
     protected static ?int $sort = 2;
     protected static ?string $heading = 'Credit';
-    protected static ?string $pollingInterval = '10s';
+    // protected static ?string $pollingInterval = '10s';
 
   
 
