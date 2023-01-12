@@ -22,6 +22,7 @@ return new class extends Migration
             $table->boolean('home_transaction');
             $table->integer('is_active')->default(1);
             $table->dateTime('transaction_date');
+            $table->boolean('lend_borrow_status');
             $table->timestamps();
         });
     }
