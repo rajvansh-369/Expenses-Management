@@ -26,3 +26,6 @@ Route::middleware('auth:sanctum')->group( function () {
 });
 Route::get('/authenticate', [ExpenseController::class, 'authenticate']); 
 Route::get('/getTotalMonthCredit', [ExpenseController::class, 'getTotalMonthCredit']);
+Route::get('/getTotalMonthDebit', [ExpenseController::class, 'getTotalMonthDebit']);
+Route::get('/getlastTransaction', [ExpenseController::class, 'getlastTransaction']);
+Route::get('/getTotalAvailBal', [ExpenseController::class, 'getTotalAvailBal']);
