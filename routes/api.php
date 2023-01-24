@@ -29,3 +29,12 @@ Route::get('/getTotalMonthCredit', [ExpenseController::class, 'getTotalMonthCred
 Route::get('/getTotalMonthDebit', [ExpenseController::class, 'getTotalMonthDebit']);
 Route::get('/getlastTransaction', [ExpenseController::class, 'getlastTransaction']);
 Route::get('/getTotalAvailBal', [ExpenseController::class, 'getTotalAvailBal']);
+
+Route::get('/expensesModel', function(){
+
+
+        $data = new \App\Models\LendBorrow();
+
+        return $data->with('expenses')->get();
+
+});

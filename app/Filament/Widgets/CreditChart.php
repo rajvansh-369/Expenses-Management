@@ -10,7 +10,7 @@ use Flowframe\Trend\TrendValue;
 
 class CreditChart extends LineChartWidget
 {
-    protected static ?int $sort = 2;
+    protected static ?int $sort = 3;
     protected static ?string $heading = 'Credit';
     // protected static ?string $pollingInterval = '10s';
 

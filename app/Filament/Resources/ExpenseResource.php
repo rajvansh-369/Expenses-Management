@@ -75,18 +75,18 @@ class ExpenseResource extends Resource
 
                             if($get('lend_borrow') == 1){
 
+                                $set('from', auth()->user()->name);
+                                if($get('from') == auth()->user()->name && $get('to') == auth()->user()->name){
+
+                                    $set('to', "");
+                                }
+                            } elseif ($get('lend_borrow') == 2){
+                                
                                 $set('to', auth()->user()->name);
                                 if($get('from') == auth()->user()->name && $get('to') == auth()->user()->name){
 
                                     $set('from', "");
                                 }
-                            } elseif ($get('lend_borrow') == 2){
-                                
-                                if($get('from') == auth()->user()->name && $get('to') == auth()->user()->name){
-
-                                    $set('to', "");
-                                }
-                                $set('from', auth()->user()->name);
                             }
 
 
@@ -123,6 +123,7 @@ class ExpenseResource extends Resource
                 Tables\Columns\TextColumn::make('description'),
                 Tables\Columns\TextColumn::make('pos_neg')
                     ->formatStateUsing(fn (string $state): string =>  ($state == 1)?  "Debit" : "Credit" )
+                    ->weight('bold')
                     ->color(function (TextColumn $column): ?string {
                         $state = $column->getState();
                  

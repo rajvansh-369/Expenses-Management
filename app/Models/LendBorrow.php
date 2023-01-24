@@ -18,7 +18,9 @@ class LendBorrow extends Model
         
     ];
 
-    public function project(){
-        return $this->belongsTo(Expense::class,'id', 'expense_id');
+    public function expenses(){
+
+       
+        return $this->belongsTo(Expense::class, 'expense_id', 'id');
     }
 }

@@ -55,6 +55,8 @@ public function getTotalMonthDebit(){
             )
             ->perMonth()
             ->sum('amount');
+
+            // dd($trend);
                 if($trend){
                     return  $this->sendResponse($trend,'Success');
                 }else{
