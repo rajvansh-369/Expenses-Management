@@ -65,15 +65,18 @@ class ExpenseOverview extends BaseWidget
             $incrementDebit = 'heroicon-s-trending-down';
             $colorDebit = 'danger';
         }
+
+
+        // dd($Creditsum, $Debitsum );
         $currentBalance = $Creditsum - $Debitsum;
         
         return [
-            Card::make('Total Credit', $CreditsumCurrentMonth)
+            Card::make('Total Credit', $Creditsum)
                 ->description($pastCalcCredit.'%')
                 ->chart($CreditamountArr)
                 ->descriptionIcon($incrementCredit)
                 ->color($colorCredit),
-            Card::make('Total Debit',  $DebitsumCurrentMonth)
+            Card::make('Total Debit',  $Debitsum)
                 ->description($pastCalcDebit."%")
                 ->chart($DebitamountArr)
                 ->descriptionIcon($incrementDebit)

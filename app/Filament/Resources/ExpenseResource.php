@@ -6,6 +6,7 @@ use App\Filament\Resources\ExpenseResource\Pages;
 use App\Filament\Resources\ExpenseResource\RelationManagers;
 use App\Filament\Resources\ExpenseResource\Widgets\ExpenseOverview;
 use App\Models\Expense;
+use Closure;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -14,6 +15,9 @@ use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Forms\Components\DateTimePicker;
+use Filament\Forms\Components\Fieldset;
+use Filament\Forms\Components\Hidden;
+use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\Toggle;
 use Filament\Tables\Columns\TextColumn;
 
@@ -58,7 +62,54 @@ class ExpenseResource extends Resource
                     ->default(now()),
                 Toggle::make('home_transaction')
                     ->label('Home Transaction'),
+
+                Toggle::make('lend_borrow_status')
+                    ->label('Lend / Borrow')
+                    ->reactive(),
+
+                    Fieldset::make('Lend / Borrow Details')
+                    ->relationship('Lend_Borrow')
+                    ->schema([
+                        Radio::make('lend_borrow')
+                        ->label(function (Closure $set, $state, $get) {
+
+                            if($get('lend_borrow') == 1){
+
+                                $set('from', auth()->user()->name);
+                                if($get('from') == auth()->user()->name && $get('to') == auth()->user()->name){
+
+                                    $set('to', "");
+                                }
+                            } elseif ($get('lend_borrow') == 2){
                                 
+                                $set('to', auth()->user()->name);
+                                if($get('from') == auth()->user()->name && $get('to') == auth()->user()->name){
+
+                                    $set('from', "");
+                                }
+                            }
+
+
+                            return "";
+                        })
+                        ->options([
+                            '1' => 'Lend',
+                            '2' => 'Borrow',
+                            
+                        ])
+                        ->inline(),
+                        Forms\Components\TextInput::make('from')
+                         ->label("From")
+                        ->required(),
+                        Forms\Components\TextInput::make('to')
+                         ->label("To")
+                        ->required(),
+                        Toggle::make('status')
+                             ->label('Status')
+                             ->offIcon('heroicon-s-lightning-bolt')
+                             ->onIcon('heroicon-s-check'),
+                    ])->hidden( fn (Closure $get) => $get('lend_borrow_status') == 1 ? false : true)
+                            ->reactive()
             ]);
             
     }
@@ -72,6 +123,7 @@ class ExpenseResource extends Resource
                 Tables\Columns\TextColumn::make('description'),
                 Tables\Columns\TextColumn::make('pos_neg')
                     ->formatStateUsing(fn (string $state): string =>  ($state == 1)?  "Debit" : "Credit" )
+                    ->weight('bold')
                     ->color(function (TextColumn $column): ?string {
                         $state = $column->getState();
                  

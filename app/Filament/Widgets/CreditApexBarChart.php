@@ -9,7 +9,7 @@ use App\Models\Expense;
 class CreditApexBarChart extends ApexChartWidget
 {
 
-    protected static ?int $sort = 5;
+    protected static ?int $sort = 2;
     /**
      * Chart Id
      *

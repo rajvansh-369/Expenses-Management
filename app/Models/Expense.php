@@ -20,6 +20,12 @@ class Expense extends Model
         'pos_neg',
         'transaction_date',
         'home_transaction',
+        'lend_borrow_status',
     ];
+
+
+    public function Lend_Borrow(){
+        return $this->hasOne(LendBorrow::class);
+    }
 
 }
