@@ -69,19 +69,21 @@ class ExpenseOverview extends BaseWidget
 
         // dd($Creditsum, $Debitsum );
         $currentBalance = $Creditsum - $Debitsum;
+
+        // $bal = $currentBalance;
         
         return [
-            Card::make('Total Credit', $Creditsum)
+            Card::make('Total Credit', "₹".number_format($Creditsum))
                 ->description($pastCalcCredit.'%')
                 ->chart($CreditamountArr)
                 ->descriptionIcon($incrementCredit)
                 ->color($colorCredit),
-            Card::make('Total Debit',  $Debitsum)
+            Card::make('Total Debit',  "₹".number_format($Debitsum))
                 ->description($pastCalcDebit."%")
                 ->chart($DebitamountArr)
                 ->descriptionIcon($incrementDebit)
                 ->color( $colorDebit),
-            Card::make('Current Balance',  $currentBalance)
+            Card::make('Current Balance',  "₹".number_format($currentBalance))
         ];
     }
 }

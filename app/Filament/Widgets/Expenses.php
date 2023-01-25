@@ -24,7 +24,7 @@ class Expenses extends BaseWidget
         return [
                 // Tables\Columns\TextColumn::make('user_id'),
                 TextColumn::make('id')->rowIndex(),
-                Tables\Columns\TextColumn::make('amount') ->formatStateUsing(fn (string $state): string => __("{$state} ₹")),
+                Tables\Columns\TextColumn::make('amount') ->formatStateUsing(fn (string $state): string => __("₹{$state}")),
                 Tables\Columns\TextColumn::make('description'),
                 Tables\Columns\TextColumn::make('pos_neg')
                     ->formatStateUsing(fn (string $state): string =>  ($state == 1)?  "Debit" : "Credit" )

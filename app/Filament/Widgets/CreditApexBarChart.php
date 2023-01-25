@@ -41,6 +41,9 @@ class CreditApexBarChart extends ApexChartWidget
         if($this->filter == 1){
            $filterByHomeDebit = "1";
            $filterByColumn = 'home_transaction'; 
+        }elseif($this->filter == 2){
+            $filterByHomeDebit = "0";
+            $filterByColumn = 'home_transaction'; 
         }else{
             $filterByHomeDebit = auth()->user()->id;
             $filterByColumn = 'user_id';
@@ -123,6 +126,9 @@ class CreditApexBarChart extends ApexChartWidget
 
             0 => 'Current',
             1  => 'Recived From Home',
+            2  => 'Recived Except From Home',
+
+           
              
         ];
     }
