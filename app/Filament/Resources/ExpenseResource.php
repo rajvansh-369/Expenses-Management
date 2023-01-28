@@ -19,6 +19,7 @@ use Filament\Forms\Components\Fieldset;
 use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\Toggle;
+use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 
  
@@ -119,8 +120,8 @@ class ExpenseResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('id')->rowIndex(),
-                Tables\Columns\TextColumn::make('amount') ->formatStateUsing(fn (string $state): string => __("{$state} ₹")),
-                Tables\Columns\TextColumn::make('description'),
+                Tables\Columns\TextColumn::make('amount') ->formatStateUsing(fn (string $state): string => __("₹{$state}")),
+                Tables\Columns\TextColumn::make('description')->limit(15),
                 Tables\Columns\TextColumn::make('pos_neg')
                     ->formatStateUsing(fn (string $state): string =>  ($state == 1)?  "Debit" : "Credit" )
                     ->weight('bold')
@@ -133,10 +134,19 @@ class ExpenseResource extends Resource
                         return 'success';
                     })
                         ->label("Transaction Type"),
-                Tables\Columns\TextColumn::make('home_transaction')
-                    ->formatStateUsing(fn (string $state): string => ($state == 0)?      "No" : "Yes"  )
-                    ->label("Home Transaction")
-                    ,
+                        IconColumn::make('home_transaction')
+                        ->options([
+                            'heroicon-o-pencil' => 'draft',
+                            // 'heroicon-o-clock' => 1,
+                            'heroicon-s-home' => True,
+                            'entypo-cross' => False,
+                        ])
+                        ->colors([
+                            'secondary',
+                            'danger' => False,
+                            // 'warning' => 1,
+                            'success' => True,
+                        ])->label('Home Transaction'),
                 Tables\Columns\TextColumn::make('transaction_date')
                     ->label("Transaction Date")
                     ->dateTime('D  M d, Y h:i A'),
