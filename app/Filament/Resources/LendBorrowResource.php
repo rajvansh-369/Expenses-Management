@@ -18,8 +18,7 @@ use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Tables\Actions\Action;
-
-
+use Filament\Tables\Columns\IconColumn;
 
 class LendBorrowResource extends Resource
 {
@@ -60,6 +59,7 @@ class LendBorrowResource extends Resource
                 ->weight('bold'),
                 Tables\Columns\TextColumn::make('to')
                 ->weight('bold'),
+                IconColumn::make('status'),
                 Tables\Columns\TextColumn::make('expenses.amount')
                 ->weight('bold')
                     ,

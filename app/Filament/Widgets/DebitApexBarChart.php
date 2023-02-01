@@ -4,6 +4,7 @@ namespace App\Filament\Widgets;
 use Flowframe\Trend\Trend;
 use Flowframe\Trend\TrendValue;
 use App\Models\Expense;
+use Carbon\Carbon;
 use Leandrocfe\FilamentApexCharts\Widgets\ApexChartWidget;
 
 class DebitApexBarChart extends ApexChartWidget
@@ -48,14 +49,24 @@ class DebitApexBarChart extends ApexChartWidget
             $filterByColumn = 'user_id';
         }
 
+        // $startDate = ;
+        // $nowDate = ;
+     
+     
+        $startDate = Carbon::createFromFormat('Y-m-d', '2022-12-01');
+        $endtDate = Carbon::now();
+         $totalDays =  $endtDate->diffInDays($startDate);
 
+           
         $data = Trend::query(Expense::where('pos_neg', 1)->where('user_id', auth()->user()->id)->where($filterByColumn, $filterByHomeDebit))
         ->between(
-            start: now()->startOfMonth()->subDay(30),
+            start: now()->startOfMonth()->subDay($totalDays ),
             end: now()->endOfMonth(),
         )
         ->perMonth()
         ->sum('amount');
+        // dd( $data);
+          
         return [
             'chart' => [
                 'type' => 'bar',

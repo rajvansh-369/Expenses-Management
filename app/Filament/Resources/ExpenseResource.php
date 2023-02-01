@@ -134,7 +134,7 @@ class ExpenseResource extends Resource
                         return 'success';
                     })
                         ->label("Transaction Type"),
-                        IconColumn::make('home_transaction')
+                    IconColumn::make('home_transaction')
                         ->options([
                             'heroicon-o-pencil' => 'draft',
                             // 'heroicon-o-clock' => 1,
