@@ -5,6 +5,7 @@ use Flowframe\Trend\Trend;
 use Flowframe\Trend\TrendValue;
 use Leandrocfe\FilamentApexCharts\Widgets\ApexChartWidget;
 use App\Models\Expense;
+use Carbon\Carbon;
 
 class CreditApexBarChart extends ApexChartWidget
 {
@@ -50,9 +51,13 @@ class CreditApexBarChart extends ApexChartWidget
         }
 
 
+        $startDate = Carbon::createFromFormat('Y-m-d', '2022-12-01');
+        $endtDate = Carbon::now();
+         $totalDays =  $endtDate->diffInDays($startDate);
+
         $data = Trend::query(Expense::where('pos_neg', 0)->where('user_id', auth()->user()->id)->where($filterByColumn, $filterByHomeDebit))
         ->between(
-            start: now()->startOfMonth()->subDay(30),
+            start: now()->startOfMonth()->subDay($totalDays),
             end: now()->endOfMonth(),
         )
         ->perMonth()
