@@ -26,8 +26,10 @@ class ExpenseOverview extends BaseWidget
 
         // dd("debitSUM  ".$CreditsumCurrentMonth, "Last debitSUM  ".$lastMonthSumCredit );
         
+        if($lastMonthSumCredit == 0){$lastMonthSumCredit= 1;}
             if($lastMonthSumCredit > $CreditsumCurrentMonth){
 
+              
                 $pastCalcCredit = (($CreditsumCurrentMonth)/$lastMonthSumCredit)*100;
                 $incrementCredit = 'heroicon-s-trending-down';
                 $colorCredit = 'danger';
