@@ -62,7 +62,7 @@ class CreditChart extends LineChartWidget
             7  => 'Last week',
             30  => 'Last month',
             365  => 'This year',
-            1  => 'Recived From Home',
+            1  => 'From Home',
              
         ];
     }

@@ -130,8 +130,8 @@ class CreditApexBarChart extends ApexChartWidget
         return [
 
             0 => 'Current',
-            1  => 'Recived From Home',
-            2  => 'Recived Except From Home',
+            1  => 'From Home',
+            2  => 'Except From Home',
 
            
              

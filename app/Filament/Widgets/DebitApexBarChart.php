@@ -133,8 +133,8 @@ class DebitApexBarChart extends ApexChartWidget
         return [
 
             0 => 'Current',
-            1  => 'Debit To Home',
-            2  => 'Debit Except Home',
+            1  => 'To Home',
+            2  => 'Except Home',
              
         ];
     }
