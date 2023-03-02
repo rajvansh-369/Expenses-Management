@@ -129,8 +129,8 @@ class DebitApexChart extends ApexChartWidget
             7  => 'Last week',
             30  => 'Last month',
             365  => 'This year',
-            1  => 'Except Home Debit',
-            2  => 'Only Home Debit',
+            1  => 'Except Home',
+            2  => 'Only Home',
              
         ];
     }

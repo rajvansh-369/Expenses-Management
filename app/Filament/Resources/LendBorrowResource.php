@@ -24,7 +24,7 @@ class LendBorrowResource extends Resource
 {
     protected static ?string $model = LendBorrow::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'ri-arrow-left-right-fill';
 
 
     
