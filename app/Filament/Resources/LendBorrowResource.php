@@ -59,7 +59,8 @@ class LendBorrowResource extends Resource
                 ->weight('bold'),
                 Tables\Columns\TextColumn::make('to')
                 ->weight('bold'),
-                IconColumn::make('status'),
+                IconColumn::make('status')
+                        ->boolean(),
                 Tables\Columns\TextColumn::make('expenses.amount')
                 ->weight('bold')
                     ,
