@@ -183,6 +183,8 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Silber\PageCache\LaravelServiceProvider::class,
+        
 
         /*
          * Package Service Providers...
