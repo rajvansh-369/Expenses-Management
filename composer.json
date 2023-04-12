@@ -21,6 +21,7 @@
         "leandrocfe/filament-apex-charts": "^0.1.3",
         "owenvoke/blade-entypo": "^2.0",
         "owenvoke/blade-fontawesome": "^2.1",
+        "silber/page-cache": "^1.0",
         "socialiteproviders/google": "^4.1"
     },
     "require-dev": {
