@@ -16,5 +16,8 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+<<<<<<< HEAD
 /public/page-cache
 
+=======
+>>>>>>> 396d6cbb81c22c91a17378f550bc0a4f94756d79
