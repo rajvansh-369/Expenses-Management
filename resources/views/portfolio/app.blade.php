@@ -41,13 +41,15 @@
           <link rel="stylesheet" href="{{asset('css/plugins/fancybox.min.css')}}">
           <!-- main css -->
           <link rel="stylesheet" href="{{asset('css/style.css')}}">
-          
+
         
           <title>Snehal Rajvansh</title>
           <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7927060033825760"
              crossorigin="anonymous"></script>
         </head>
 
+
+        
         
 <style>
     @media only screen and (max-width: 991px) {
