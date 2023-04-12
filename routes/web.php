@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\PortfolioController;
 use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
 /*
@@ -14,12 +13,9 @@ use Laravel\Socialite\Facades\Socialite;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-Route::get('/', [PortfolioController::class,'index'])->name('portfolio');
-
+Route::get('/', function () {
+    return view('welcome');
+});
 
 
 Route::get('/auth/redirect', function () {
