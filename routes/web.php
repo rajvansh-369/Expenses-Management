@@ -14,10 +14,6 @@ use Laravel\Socialite\Facades\Socialite;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Route::get('/', [PortfolioController::class,'index'])->name('portfolio');
 
 
