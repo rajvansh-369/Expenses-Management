@@ -1095,6 +1095,7 @@
                             <!-- testimonial body -->
                             <div class="testimonial-body">
                               <!-- photo -->
+                              
                               <img class="art-testimonial-face" src="{{asset('storage/img/testimonials/face-4.jpg')}}" alt="face">
                               <!-- name -->
                               <h5>Paul Trueman</h5>

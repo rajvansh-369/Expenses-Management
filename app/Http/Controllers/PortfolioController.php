@@ -12,3 +12,4 @@ class PortfolioController extends Controller
             return view('portfolio.index');
     }
 }
+
