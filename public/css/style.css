@@ -99,10 +99,10 @@ common
 /* ----- text defaults ----- */
 
 
-.wrap { width: 320px; height: 196px; padding: 0; overflow: hidden; float: left;}
-.frame { width: 1280px; height: 786px; border: 1px solid black}
+.wraps { width: 320px; height: 196px; padding: 0; overflow: hidden; float: left;}
+.frames { width: 1280px; height: 786px; border: 1px solid black}
 
-.frame {
+.frames {
     /* // zoom: 0.25; */
     -moz-transform: scale(0.19);
     -moz-transform-origin: 0 0;

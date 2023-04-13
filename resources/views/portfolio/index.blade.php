@@ -436,9 +436,9 @@
 
                       @foreach ($projects as  $poject)
                         
-                      <div class="col-md-3 wrap">
+                      <div class="col-md-3 wraps">
 
-                       <iframe class="frame" src="{{$poject->project_url}}" frameborder="0" ></iframe>
+                       <iframe class="frames" src="{{$poject->project_url}}" frameborder="0" ></iframe>
                       
    
                       </div>
