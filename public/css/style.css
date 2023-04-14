@@ -89,11 +89,28 @@ $main-color: #64B5F6;
 
 common
 
+
+
+
 ------------------------------ */
 /* ----- fonts ----- */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 /* ----- text defaults ----- */
+
+
+.wraps { width: 320px; height: 196px; padding: 0; overflow: hidden; float: left;}
+.frames { width: 1280px; height: 786px; border: 1px solid black}
+
+.frames {
+    /* // zoom: 0.25; */
+    -moz-transform: scale(0.19);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(0.19);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(0.19);
+    -webkit-transform-origin: 0 0;
+}
 /* line 13, ../scss/_common.scss */
 body {
   color: #8c8c8e;
@@ -2795,3 +2812,4 @@ html.is-animating .fade-left {
     -webkit-transform: scale(1);
             transform: scale(1); } }
 /*# sourceMappingURL=style.css.map */
+

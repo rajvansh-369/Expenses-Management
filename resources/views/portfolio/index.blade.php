@@ -399,6 +399,73 @@
               </div>
               <!-- container end -->
 
+
+
+              <!-- container -->
+              <div class="container-fluid">
+
+                <!-- row -->
+                <div class="row">
+
+                  <!-- col -->
+                  <div class="col-lg-12">
+
+                    <!-- section title -->
+                    <div class="art-section-title">
+                      <!-- title frame -->
+                      <div class="art-title-frame">
+                        <!-- title -->
+                        <h4>Hands On</h4>
+                      </div>
+                      <!-- title frame end -->
+                    </div>
+                    <!-- section title end -->
+
+                  </div>
+                  <!-- col end -->
+                  
+                  <!-- col -->
+                  <div class="col-lg-12 col-md-12 my-2">
+
+                    <!-- service -->
+                    <div class="art-a art-service-icon-box">
+                      <!-- service content -->
+                      <div class="art-service-ib-content">
+                      <div class="container">
+                        <div class="row">
+
+                      @foreach ($projects as  $poject)
+                    
+                      <div class="col-md-3 ">
+                          <div class="wraps">
+                            
+                            <iframe class="frames" src="{{$poject->project_url}}" frameborder="0" ></iframe>
+                          </div>
+                       <h5 class="projectName text-center">{{$poject->project_name}}</h5>
+                          <p class="projectName ">{{substr($poject->project_description,0 , 100)}}...</p>
+                      </div>
+
+                     
+                      @endforeach
+
+                    </div>
+                  </div>
+                      
+                      </div>
+                      <!-- service content end -->
+                    </div>
+                    <!-- service end -->
+
+                  </div>
+                  <!-- col end -->
+
+                </div>
+                <!-- row end -->
+
+              </div>
+              <!-- container end -->
+
+
               <!-- container -->
               <div class="container-fluid">
 
