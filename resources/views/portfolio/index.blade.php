@@ -425,7 +425,7 @@
                   <!-- col end -->
                   
                   <!-- col -->
-                  <div class="col-lg-12 col-md-12">
+                  <div class="col-lg-12 col-md-12 my-2">
 
                     <!-- service -->
                     <div class="art-a art-service-icon-box">
@@ -435,13 +435,16 @@
                         <div class="row">
 
                       @foreach ($projects as  $poject)
-                        
-                      <div class="col-md-3 wraps">
-
-                       <iframe class="frames" src="{{$poject->project_url}}" frameborder="0" ></iframe>
-                      
-   
+                    
+                      <div class="col-md-3 ">
+                          <div class="wraps">
+                            
+                            <iframe class="frames" src="{{$poject->project_url}}" frameborder="0" ></iframe>
+                          </div>
+                       <h5 class="projectName text-center">{{$poject->project_name}}</h5>
+                          <p class="projectName ">{{substr($poject->project_description,0 , 100)}}...</p>
                       </div>
+
                      
                       @endforeach
 
