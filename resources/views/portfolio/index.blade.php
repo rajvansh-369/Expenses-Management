@@ -216,7 +216,7 @@
               <div class="art-links-frame p-15-15">
 
                 <!-- download cv button -->
-                <a href="files/snehal_backend_dev_2.0Y.pdf" class="art-link" download data-no-swup>Download cv <i class="fas fa-download"></i></a>
+                <a href="https://snehal.info/snehal/files/snehal_backend_dev_2.0Y.pdf" class="art-link" download data-no-swup>Download cv <i class="fas fa-download"></i></a>
 
               </div>
               <!-- links frame end -->
@@ -227,13 +227,13 @@
             <!-- sidebar social -->
             <div class="art-ls-social">
               <!-- social link -->
-              <a href="#." target="_blank"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://www.linkedin.com/in/snehal-raj-7373bb14b/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
               <!-- social link -->
-              <a href="#." target="_blank"><i class="fab fa-dribbble"></i></a>
+              <a href="#." target="_blank"><i class="fab fa-facebook"></i></a>
               <!-- social link -->
-              <a href="#." target="_blank"><i class="fab fa-behance"></i></a>
+              <a href="https://www.instagram.com/snehal_rajvansh_" target="_blank"><i class="fab fa-instagram"></i></a>
               <!-- social link -->
-              <a href="#." target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://github.com/rajvansh-369" target="_blank"><i class="fab fa-github"></i></a>
               <!-- social link -->
               <a href="#." target="_blank"><i class="fab fa-twitter"></i></a>
             </div>
@@ -438,8 +438,8 @@
                     
                       <div class="col-md-3 ">
                           <div class="wraps">
-                            
-                            <iframe class="frames" src="{{$poject->project_url}}" frameborder="0" ></iframe>
+                            <a target="_blank" href="{{$poject->project_url}}">
+                            <iframe class="frames" src="{{$poject->project_url}}" frameborder="0" ></iframe></a>
                           </div>
                        <h5 class="projectName text-center">{{$poject->project_name}}</h5>
                           <p class="projectName ">{{substr($poject->project_description,0 , 100)}}...</p>
