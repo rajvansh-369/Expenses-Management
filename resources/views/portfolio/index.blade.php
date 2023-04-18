@@ -437,11 +437,11 @@
                       @foreach ($projects as  $poject)
                     
                       <div class="col-md-3 ">
-                        <a target="_blank" href="{{$poject->project_url}}">
+                       
                           <div class="wraps">
                             <iframe class="frames" src="{{$poject->project_url}}" frameborder="0" ></iframe>
                           </div>
-                          
+                          <a target="_blank" href="{{$poject->project_url}}">
                           <h5 class="projectName text-center">{{$poject->project_name}}</h5>
                           <p class="projectName ">{{substr($poject->project_description,0 , 100)}}...</p>
                         </a>
