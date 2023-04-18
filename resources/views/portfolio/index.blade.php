@@ -1160,6 +1160,7 @@
                          
                           <a data-fancybox="recommendation" data-no-swup href="#art-recomendation-popup-2" class="art-link art-color-link art-w-chevron">Recommendation</a>
                         </div>
+                        
 
                         <!-- popup -->
                         <div class="art-recomendation-popup" style="display: none;" id="art-recomendation-popup-2">
@@ -1169,6 +1170,7 @@
                             <!-- testimonial body -->
                             <div class="testimonial-body">
                               <!-- photo -->
+
                               <img class="art-testimonial-face" src="{{asset('storage/img/testimonials/face-4.jpg')}}" alt="face">
                               <!-- name -->
                               <h5>Paul Trueman</h5>
