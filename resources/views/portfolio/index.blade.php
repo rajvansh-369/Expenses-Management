@@ -499,9 +499,14 @@
                       <!-- service content -->
                       <div class="art-service-ib-content">
                         <!-- title -->
-                        <img class="full_screen" src="https://skillicons.dev/icons?i=php,laravel,python,js,wordpress,jquery,html,css,bootstrap,mysql,git,arduino" alt="">
-                        <img class="mobile_screen" src="https://skillicons.dev/icons?i=php,laravel,python,js,wordpress,jquery" alt="">
-                        <img class="mobile_screen" src="https://skillicons.dev/icons?i=html,css,bootstrap,mysql,git,arduino" alt="">
+                        <div class="skillIcons">
+
+                          <img class="full_screen" src="https://skillicons.dev/icons?i=php,laravel,python,js,wordpress,jquery,html,css,bootstrap,mysql,git,arduino" alt="">
+                          <img class="mobile_screen" src="https://skillicons.dev/icons?i=php,laravel,python," alt="">
+                          <img class="mobile_screen" src="https://skillicons.dev/icons?i=js,wordpress,jquery" alt="">
+                          <img class="mobile_screen" src="https://skillicons.dev/icons?i=html,css,bootstrap" alt="">
+                          <img class="mobile_screen" src="https://skillicons.dev/icons?i=mysql,git,arduino" alt="">
+                        </div>
                         <!-- text -->
                         <div class="mb-15">
                          
