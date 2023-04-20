@@ -1268,13 +1268,10 @@
                       <div class="art-table p-15-15">
                         <ul>
                           <li>
-                            <h6>Email:</h6><span>snhlrj8@gmail.com</span>
+                            <h6>Email:</h6><span>snhlrj8[at]gmail.com</span>
                           </li>
                           <li>
                             <h6>LinkedIn:</h6><span>@snhlrj</span>
-                          </li>
-                          <li>
-                            <h6>Skype:</h6><span>Snehal Raj</span>
                           </li>
                           <li>
                             <h6>GitHub:</h6><span>rajvansh-369</span>
@@ -1298,7 +1295,7 @@
                             <!-- <h6>Office:</h6><span>+78 (098) 326 11 22</span> -->
                           </li>
                           <li>
-                            <h6>Personal:</h6><span>+91 (7979) 068 408</span>
+                            <h6>Personal:</h6><span>+91 (7979) *** ****</span>
                           </li>
                         </ul>
                       </div>
