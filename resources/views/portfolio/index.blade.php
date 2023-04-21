@@ -249,16 +249,17 @@
 
                         <div class="art-ls-social">
                             <!-- social link -->
-                            <a href="https://www.linkedin.com/in/snehal-raj-7373bb14b/" class="art-link"
-                                    download data-no-swup target="_blank"><i
-                                    class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.linkedin.com/in/snehal-raj-7373bb14b/" download data-no-swup
+                                target="_blank"><i class="fab fa-linkedin-in"></i></a>
                             <!-- social link -->
-                            <a href="https://www.facebook.com/snehal.rajbansh/" data-no-swup target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.facebook.com/snehal.rajbansh/" data-no-swup target="_blank"><i
+                                    class="fab fa-facebook"></i></a>
                             <!-- social link -->
-                            <a href="https://www.instagram.com/snehal_rajvansh_" data-no-swup  target="_blank"><i
+                            <a href="https://www.instagram.com/snehal_rajvansh_" data-no-swup target="_blank"><i
                                     class="fab fa-instagram"></i></a>
                             <!-- social link -->
-                            <a href="https://github.com/rajvansh-369" data-no-swup target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/rajvansh-369" data-no-swup target="_blank"><i
+                                    class="fab fa-github"></i></a>
                             <!-- social link -->
                             <a href="#." target="_blank"><i class="fab fa-twitter"></i></a>
                         </div>
@@ -470,7 +471,8 @@
                                                                         src="{{ $poject->project_url }}"
                                                                         frameborder="0"></iframe>
                                                                 </div>
-                                                                <a target="_blank"  data-no-swup href="{{ $poject->project_url }}">
+                                                                <a target="_blank" data-no-swup
+                                                                    href="{{ $poject->project_url }}">
                                                                     <h5 class="projectName text-center">
                                                                         {{ $poject->project_name }}</h5>
                                                                     <p class="projectName ">
