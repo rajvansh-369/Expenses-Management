@@ -35,15 +35,6 @@
     </script>
     <!-- End Google Tag Manager -->
 
-    @include('meta::manager', [
-        'title'         => 'Snehal Rajvansh | Portfolio',
-        'description'   => "Snehal is a software developer with 3 years of experience. Visit her portfolio website to see her work and learn more about her skills",
-        'image'         => 'https://snehal.info/snehal/img/thumbnail.ico',
-        'keywords'         => 'Snehal, portfolio, web development, resume, CV, skills, experience, contact snehal , Raj, Rajvansh, Snehal rajvansh, Snehal raj, rajvansh, snehal portfolio',
-    ])
-
-
-
     <!-- Required meta tags -->
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -51,8 +42,8 @@
     <meta name="theme-color" content="#2B2B35">
 
     <meta name="keywords"
-        content="Snehal, portfolio, web development, resume, CV, skills, experience, contact snehal , Raj, Rajvansh, Snehal rajvansh, Snehal raj, rajvansh, snehal portfolio">
-    <meta name="description" content="Snehal is a software developer with 3 years of experience. Visit her portfolio website to see her work and learn more about her skills.">
+        content="snehal, Snehal, Raj, raj , Rajvansh, Snehal rajvansh, Snehal raj, rajvansh, snehal portfolio">
+    <meta name="description" content="Hi, I'm Snehal. A Software Developer.">
     <meta name=”robots” content="all">
     <!-- favicon  -->
     <link rel="shortcut icon" href="{{ asset('img/thumbnail.ico') }}" type="image/x-icon">
