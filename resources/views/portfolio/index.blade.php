@@ -1439,7 +1439,7 @@
                                         <div class="art-a art-card">
 
                                             <!-- contact form -->
-                                            <form id="form" class="art-contact-form">
+                                            {{-- <form id="form" class="art-contact-form"> --}}
                                                 <!-- form field -->
                                                 <div class="art-form-field">
                                                     <!-- name input -->
@@ -1469,11 +1469,11 @@
                                                 <!-- button -->
                                                 <div class="art-submit-frame">
                                                     <button class="art-btn art-btn-md art-submit"
-                                                        type="submit"><span>Send message</span></button>
+                                                        ><span>Send message</span></button>
                                                     <!-- success -->
                                                     <div class="art-success">Success <i class="fas fa-check"></i></div>
                                                 </div>
-                                            </form>
+                                            {{-- </form> --}}
                                             <!-- contact form end -->
 
                                         </div>
@@ -1535,4 +1535,58 @@
         <!-- preloader end -->
 
     </div>
+
+
+    <script>
+
+          // Contact form
+    $('.art-input').keyup(function() {
+      if ($(this).val()) {
+        $(this).addClass('art-active');
+      } else {
+        $(this).removeClass('art-active');
+      }
+    });
+
+
+  
+    $(".art-submit").click(function() {
+
+      var name = document.getElementById('name').value
+       var email =  document.getElementById('email').value
+        var message =  document.getElementById('message').value
+
+      $.ajax({
+        headers: {
+         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      },
+        type: "POST",
+        url: @json(route('sendMessage')),
+        data: {
+          'name': name,
+          'email': email,
+          'message': message,
+
+        }
+      }).done(function() {
+  
+        var tl = anime.timeline({
+          easing: 'easeOutExpo',
+        });
+  
+        tl
+          .add({
+            targets: '.art-submit',
+            opacity: 0,
+            scale: .5,
+          })
+          .add({
+            targets: '.art-success',
+            scale: 1,
+            height: '45px',
+          })
+      });
+      return false;
+    });
+      </script>
 @endsection
