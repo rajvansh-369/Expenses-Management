@@ -14,7 +14,7 @@
             <div class="art-app-container">
 
                 <!-- info bar -->
-                <div class="art-info-bar art-active">
+                <div class="art-info-bar" id="sidebarClass">
 
                     <!-- menu bar frame -->
                     <div class="art-info-bar-frame">
@@ -271,7 +271,7 @@
                 <!-- info bar end -->
 
                 <!-- content -->
-                <div class="art-content art-active">
+                <div class="art-content" id="sidebarClass2">
 
                     <!-- curtain -->
                     <div class="art-curtain"></div>

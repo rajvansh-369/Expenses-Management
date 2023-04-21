@@ -705,5 +705,14 @@ $(function() {
       });
   
     })
+
+    if (screen.width < 768) {
+      
+      
+      const element = document.getElementById("sidebarClass");
+      const element2 = document.getElementById("sidebarClass2");
+      element.classList.add("art-active");
+      element2.classList.add("art-active");
+    } 
   
   });
