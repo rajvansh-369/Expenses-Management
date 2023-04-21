@@ -1214,7 +1214,7 @@ info bar
     position: absolute;
     bottom: 0;
     -webkit-box-shadow: 0 1px 4px 0 rgba(15, 15, 20, 0.1);
-            box-shadow: 0 1px 4px 0 rgba(15, 15, 20, 0.1);
+    box-shadow: 0 1px 4px 0 rgba(15, 15, 20, 0.1);
     left: 0;
     width: 100%;
     z-index: 999; }
