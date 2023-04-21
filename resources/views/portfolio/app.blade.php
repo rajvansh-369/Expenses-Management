@@ -39,12 +39,14 @@
         'title'         => 'Snehal Rajvansh | Portfolio',
         'description'   => "Snehal is a software developer with 3 years of experience. Visit her portfolio website to see her work and learn more about her skills",
         'image'         => 'https://snehal.info/snehal/img/thumbnail.ico',
+       'referrer'       => 'default',
         'keywords'         => 'Snehal, portfolio, web development, resume, CV, skills, experience, contact snehal , Raj, Rajvansh, Snehal rajvansh, Snehal raj, rajvansh, snehal portfolio',
     ])
 
 
 
     <!-- Required meta tags -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- color of address bar in mobile browser -->
@@ -109,6 +111,8 @@
 </style>
 
 <body>
+        <!-- jquery js -->
+        <script src="{{ asset('js/plugins/jquery.min.js') }}"></script>
 
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KH627M5" height="0" width="0"
@@ -124,8 +128,7 @@
     <!-- app end -->
     <div id="swupMenu"></div>
 
-    <!-- jquery js -->
-    <script src="{{ asset('js/plugins/jquery.min.js') }}"></script>
+
     <!-- anime js -->
     <script src="{{ asset('js/plugins/anime.min.js') }}"></script>
     <!-- swiper js -->

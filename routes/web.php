@@ -16,6 +16,7 @@ use Laravel\Socialite\Facades\Socialite;
 
 
 Route::get('/', [PortfolioController::class,'index'])->name('portfolio');
+Route::post('/sendMessage', [PortfolioController::class,'sendMessage'])->name('sendMessage');
 
 
 
