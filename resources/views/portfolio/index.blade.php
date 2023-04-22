@@ -311,7 +311,7 @@
                                                 <!-- main title -->
                                                 <div class="art-banner-title">
                                                     <!-- title -->
-                                                    <h1 class="mb-15">Hi, I'm Software <br>Developer</h1>
+                                                    <h1 class="mb-15">Hi, I'm a Software <br>Developer</h1>
                                                     <!-- suptitle -->
                                                     <div class="art-lg-text art-code mb-25">&lt;<i>code</i>&gt; I code
                                                         <span class="txt-rotate" data-period="2000"
@@ -444,7 +444,7 @@
                                             <!-- title frame -->
                                             <div class="art-title-frame">
                                                 <!-- title -->
-                                                <h4>Hands On</h4>
+                                                <h4>Projects</h4>
                                             </div>
                                             <!-- title frame end -->
                                         </div>
