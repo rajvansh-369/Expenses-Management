@@ -444,7 +444,7 @@
                                             <!-- title frame -->
                                             <div class="art-title-frame">
                                                 <!-- title -->
-                                                <h4>Hands On</h4>
+                                                <h4>Projects</h4>
                                             </div>
                                             <!-- title frame end -->
                                         </div>
