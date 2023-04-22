@@ -49,7 +49,7 @@
                             <!-- name -->
                             <h5 class="art-name mb-10">Snehal Rajvansh</h5>
                             <!-- post -->
-                            <div class="art-sm-text">Software Deweloper <br>PHP, Laravel, Python </div>
+                            <div class="art-sm-text">Software Developer <br>PHP, Laravel, Python </div>
                         </div>
                         <!-- info bar header end -->
 
