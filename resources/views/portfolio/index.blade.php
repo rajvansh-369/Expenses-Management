@@ -354,7 +354,7 @@
                                             <!-- counter -->
                                             <div class="art-counter-box">
                                                 <!-- counter number -->
-                                                <span class="art-counter">2</span><span class="art-counter-plus">+</span>
+                                                <span class="art-counter">3</span><span class="art-counter-plus">+</span>
                                             </div>
                                             <!-- counter end -->
                                             <!-- title -->
@@ -1439,7 +1439,7 @@
                                         <div class="art-a art-card">
 
                                             <!-- contact form -->
-                                            {{-- <form id="form" class="art-contact-form"> --}}
+                                            <form id="form" class="art-contact-form">
                                                 <!-- form field -->
                                                 <div class="art-form-field">
                                                     <!-- name input -->
@@ -1473,7 +1473,7 @@
                                                     <!-- success -->
                                                     <div class="art-success">Success <i class="fas fa-check"></i></div>
                                                 </div>
-                                            {{-- </form> --}}
+                                            </form>
                                             <!-- contact form end -->
 
                                         </div>
@@ -1496,10 +1496,9 @@
                                 <!-- footer -->
                                 <footer>
                                     <!-- copyright -->
-                                    <div class="art-copy">© 2022 Snehal Rajvansh</div>
+                                    <div class="art-copy">© 2023 Snehal Rajvansh</div>
                                     <!-- author ( Please! Do not delete it. You are awesome! :) -->
-                                    <div>Template author:&#160; <a href="https://themeforest.net/user/millerdigitaldesign"
-                                            target="_blank" data-no-swup>Nazar Miller</a></div>
+                                    <div>Template author:&#160; Snehal Rajvansh</div>
                                 </footer>
                                 <!-- footer end -->
 
@@ -1556,6 +1555,8 @@
        var email =  document.getElementById('email').value
         var message =  document.getElementById('message').value
 
+        if(name != "" &&  email != ""  ){
+
       $.ajax({
         headers: {
          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -1573,6 +1574,10 @@
         var tl = anime.timeline({
           easing: 'easeOutExpo',
         });
+
+        document.getElementById('name').value = "";
+        document.getElementById('email').value = "";
+        document.getElementById('message').value = "";
   
         tl
           .add({
@@ -1586,6 +1591,11 @@
             height: '45px',
           })
       });
+
+    }else{
+
+        alert("Please enter Name & Email");
+    }
       return false;
     });
       </script>
