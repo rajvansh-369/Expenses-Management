@@ -315,7 +315,7 @@
                                                     <!-- suptitle -->
                                                     <div class="art-lg-text art-code mb-25">&lt;<i>code</i>&gt; I code
                                                         <span class="txt-rotate" data-period="2000"
-                                                            data-rotate='[ "Web Application.", "APIs.", "design database structure.", "automation tools(Cron Job)." ]'></span>&lt;/<i>code</i>&gt;
+                                                            data-rotate='[ "Web Application.", "APIs.", "Crawler", "automation tools(Cron Job)." ]'></span>&lt;/<i>code</i>&gt;
                                                     </div>
                                                     <div class="art-buttons-frame">
                                                         <!-- button -->
@@ -613,8 +613,8 @@
                                                     </div>
 
                                                     <!-- <p>Dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p> -->
-                                                    <a data-fancybox="diplome" data-no-swup href="files/certificate.jpg"
-                                                        class="art-link art-color-link art-w-chevron">Diplome</a>
+                                                    {{-- <a data-fancybox="diplome" data-no-swup href="files/certificate.jpg"
+                                                        class="art-link art-color-link art-w-chevron">Diplome</a> --}}
                                                 </div>
                                             </div>
 
@@ -651,8 +651,8 @@
                                                         </div>
                                                     </div>
                                                     <!-- <p>Dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p> -->
-                                                    <a data-fancybox="diplome" data-no-swup href="files/certificate.jpg"
-                                                        class="art-link art-color-link art-w-chevron">Licence</a>
+                                                    {{-- <a data-fancybox="diplome" data-no-swup href="files/certificate.jpg"
+                                                        class="art-link art-color-link art-w-chevron">Licence</a> --}}
                                                 </div>
 
                                             </div>
@@ -689,8 +689,8 @@
                                                     </div>
 
                                                     <!-- <p>Dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p> -->
-                                                    <a data-fancybox="diplome" data-no-swup href="files/certificate.jpg"
-                                                        class="art-link art-color-link art-w-chevron">Diplome</a>
+                                                    {{-- <a data-fancybox="diplome" data-no-swup href="files/certificate.jpg"
+                                                        class="art-link art-color-link art-w-chevron">Diplome</a> --}}
                                                 </div>
 
                                             </div>
@@ -711,8 +711,8 @@
                                                     </div>
 
                                                     <!-- <p>Dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p> -->
-                                                    <a data-fancybox="diplome" data-no-swup href="files/certificate.jpg"
-                                                        class="art-link art-color-link art-w-chevron">Diplome</a>
+                                                    {{-- <a data-fancybox="diplome" data-no-swup href="files/certificate.jpg"
+                                                        class="art-link art-color-link art-w-chevron">Diplome</a> --}}
                                                 </div>
 
                                             </div>
@@ -763,9 +763,9 @@
                                                         <li>Support, maintain and document software functionality</li>
                                                         <li> Create technical documentation for reference and reporting</li>
                                                     </ul>
-                                                    <a data-fancybox="recommendation" data-no-swup
+                                                    {{-- <a data-fancybox="recommendation" data-no-swup
                                                         href="#art-recomendation-popup-1"
-                                                        class="art-link art-color-link art-w-chevron">Recommendation</a>
+                                                        class="art-link art-color-link art-w-chevron">Recommendation</a> --}}
 
                                                 </div>
                                             </div>
@@ -850,9 +850,9 @@
                                                         <li>Support, maintain and document software functionality</li>
                                                         <li> Create technical documentation for reference and reporting</li>
                                                     </ul>
-                                                    <a data-fancybox="recommendation" data-no-swup
+                                                    {{-- <a data-fancybox="recommendation" data-no-swup
                                                         href="#art-recomendation-popup-2"
-                                                        class="art-link art-color-link art-w-chevron">Recommendation</a>
+                                                        class="art-link art-color-link art-w-chevron">Recommendation</a> --}}
                                                 </div>
 
                                                 <!-- popup -->
@@ -959,9 +959,9 @@
                                                     Management and
                                                     Checkout.</p>
 
-                                                <a data-fancybox="recommendation" data-no-swup
+                                                {{-- <a data-fancybox="recommendation" data-no-swup
                                                     href="#art-recomendation-popup-1"
-                                                    class="art-link art-color-link art-w-chevron">Recommendation</a>
+                                                    class="art-link art-color-link art-w-chevron">Recommendation</a> --}}
 
                                             </div>
                                         </div>
@@ -1045,9 +1045,9 @@
                                                     Listing, Product Details, Cart Management and Checkout.
                                                 </p>
 
-                                                <a data-fancybox="recommendation" data-no-swup
+                                                {{-- <a data-fancybox="recommendation" data-no-swup
                                                     href="#art-recomendation-popup-2"
-                                                    class="art-link art-color-link art-w-chevron">Recommendation</a>
+                                                    class="art-link art-color-link art-w-chevron">Recommendation</a> --}}
                                             </div>
 
                                             <!-- popup -->
@@ -1118,9 +1118,9 @@
                                                     content creator or user can view, purchase, Chat etc.
                                                 </p>
 
-                                                <a data-fancybox="recommendation" data-no-swup
+                                                {{-- <a data-fancybox="recommendation" data-no-swup
                                                     href="#art-recomendation-popup-2"
-                                                    class="art-link art-color-link art-w-chevron">Recommendation</a>
+                                                    class="art-link art-color-link art-w-chevron">Recommendation</a> --}}
                                             </div>
 
                                             <!-- popup -->
@@ -1190,9 +1190,9 @@
                                                     physical
                                                     spaces/rooms for Business meets or as a co-operate office</p>
 
-                                                <a data-fancybox="recommendation" data-no-swup
+                                                {{-- <a data-fancybox="recommendation" data-no-swup
                                                     href="#art-recomendation-popup-2"
-                                                    class="art-link art-color-link art-w-chevron">Recommendation</a>
+                                                    class="art-link art-color-link art-w-chevron">Recommendation</a> --}}
                                             </div>
 
                                             <!-- popup -->
@@ -1266,9 +1266,9 @@
                                                     Listing, Product Details, Cart Management and Checkout.
                                                 </p>
 
-                                                <a data-fancybox="recommendation" data-no-swup
+                                                {{-- <a data-fancybox="recommendation" data-no-swup
                                                     href="#art-recomendation-popup-2"
-                                                    class="art-link art-color-link art-w-chevron">Recommendation</a>
+                                                    class="art-link art-color-link art-w-chevron">Recommendation</a> --}}
                                             </div>
 
 
