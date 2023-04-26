@@ -72,7 +72,30 @@
                                     <li>
                                         <h6>Age:</h6><span>23</span>
                                     </li>
+
+
+                                    <li class="mt-4">
+                                        {{-- <div class="art-ls-social"> --}}
+                                        <!-- social link -->
+                                        <a href="https://www.linkedin.com/in/snehal-raj-7373bb14b/" download data-no-swup
+                                            target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                        <!-- social link -->
+                                        <a href="https://www.facebook.com/snehal.rajbansh/" data-no-swup target="_blank"><i
+                                                class="fab fa-facebook"></i></a>
+                                        <!-- social link -->
+                                        <a href="https://www.instagram.com/snehal_rajvansh_" data-no-swup target="_blank"><i
+                                                class="fab fa-instagram"></i></a>
+                                        <!-- social link -->
+                                        <a href="https://github.com/rajvansh-369" data-no-swup target="_blank"><i
+                                                class="fab fa-github"></i></a>
+                                        <!-- social link -->
+                                        <a href="#." target="_blank"><i class="fab fa-twitter"></i></a>
+                                    {{-- </div> --}}
+                                </li>
                                 </ul>
+                          
+                          
+                          
                             </div>
                             <!-- info bar about end -->
 
@@ -1372,6 +1395,11 @@
                                                         <h6>Streat:</h6><span>IT Park</span>
                                                     </li>
                                                 </ul>
+                                          
+                                          
+                                          
+
+                        
                                             </div>
                                         </div>
                                         <!-- contact card end -->
