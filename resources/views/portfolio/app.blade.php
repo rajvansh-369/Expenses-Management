@@ -37,7 +37,7 @@
 
     @include('meta::manager', [
         'title'         => 'Snehal Rajvansh | Portfolio',
-        'description'   => "Snehal is a software developer with 3 years of experience. Visit her portfolio website to see her work and learn more about her skills",
+        'description'   => "Snehal is a software developer with 3 years of experience. Visit his portfolio website to see his work and learn more about his skills",
         'image'         => 'https://snehal.info/snehal/img/thumbnail.ico',
        'referrer'       => 'default',
         'keywords'         => 'Snehal, portfolio, web development, resume, CV, skills, experience, contact snehal , Raj, Rajvansh, Snehal rajvansh, Snehal raj, rajvansh, snehal portfolio',

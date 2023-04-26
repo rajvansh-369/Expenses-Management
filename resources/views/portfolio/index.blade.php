@@ -1392,7 +1392,7 @@
                                                     </li>
 
                                                     <li>
-                                                        <h6>Streat:</h6><span>IT Park</span>
+                                                        <h6>Street:</h6><span>IT Park</span>
                                                     </li>
                                                 </ul>
                                           
