@@ -52,10 +52,7 @@
     <!-- color of address bar in mobile browser -->
     <meta name="theme-color" content="#2B2B35">
 
-    <meta name="keywords"
-        content="Snehal, portfolio, web development, resume, CV, skills, experience, contact snehal , Raj, Rajvansh, Snehal rajvansh, Snehal raj, rajvansh, snehal portfolio">
-    <meta name="description" content="Snehal is a software developer with 3 years of experience. Visit her portfolio website to see her work and learn more about her skills.">
-    <meta name=”robots” content="all">
+     <meta name=”robots” content="all">
     <!-- favicon  -->
     <link rel="shortcut icon" href="{{ asset('img/thumbnail.ico') }}" type="image/x-icon">
     <!-- bootstrap css -->
