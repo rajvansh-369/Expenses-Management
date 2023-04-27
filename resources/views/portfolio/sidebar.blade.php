@@ -239,7 +239,7 @@
                             <div class="art-links-frame p-15-15">
 
                                 <!-- download cv button -->
-                                <a href="https://snehal.info/snehal/files/snehal_backend_dev_2.0Y.pdf" class="art-link"
+                                <a href="https://snehal.info/snehal/files/snehal_backend_dev_2.0Y.pdf" target="_blank" class="art-link"
                                     download data-no-swup>Download cv <i class="fas fa-download"></i></a>
 
                             </div>
