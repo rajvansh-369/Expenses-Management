@@ -240,7 +240,7 @@
 
                                 <!-- download cv button -->
                                 <a href="https://snehal.info/snehal/files/snehal_backend_dev_2.0Y.pdf" target="_blank" class="art-link"
-                                    download data-no-swup>Download cv <i class="fas fa-download"></i></a>
+                                    data-no-swup>Download cv <i class="fas fa-download"></i></a>
 
                             </div>
                             <!-- links frame end -->
@@ -254,7 +254,7 @@
 
                         <div class="art-ls-social">
                             <!-- social link -->
-                            <a href="https://www.linkedin.com/in/snehal-raj-7373bb14b/" download data-no-swup
+                            <a href="https://www.linkedin.com/in/snehal-raj-7373bb14b/"  data-no-swup
                                 target="_blank"><i class="fab fa-linkedin-in"></i></a>
                             <!-- social link -->
                             <a href="https://www.facebook.com/snehal.rajbansh/" data-no-swup target="_blank"><i
