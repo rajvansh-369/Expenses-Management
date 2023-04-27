@@ -17,6 +17,9 @@ use Laravel\Socialite\Facades\Socialite;
 
 Route::get('/', [PortfolioController::class,'index'])->name('portfolio');
 Route::post('/sendMessage', [PortfolioController::class,'sendMessage'])->name('sendMessage');
+Route::get('/privacy-Policy', function(){
+    return view('portfolio.privacyPolicy');
+})->name('privacy-Policy');
 
 
 
