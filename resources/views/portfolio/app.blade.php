@@ -36,15 +36,17 @@
     <!-- End Google Tag Manager -->
 
     @include('meta::manager', [
-            'title'         => 'Snehal Rajvansh | Portfolio',
-            'description'   => "Snehal is a software developer with 3 years of experience. Visit his portfolio website to see his work and learn more about his skills",
-            'image'         => 'https://snehal.info/snehal/img/thumbnail.ico',
-            'referrer'       => 'default',
-            'author'       => 'Snehal Rajvansh',
-            'geo_position'       => '22.351115;78.667743',
-            'geo_region'       => 'IN',
-            'ICBM'       => '22.351115, 78.667743',
-            'keywords'         => 'Snehal, portfolio, web development, resume, CV, skills, experience, contact snehal , Raj, Rajvansh, Snehal rajvansh, Snehal raj, rajvansh, snehal portfolio',
+        'title' => 'Snehal Rajvansh | Portfolio',
+        'description' =>
+            'Snehal is a software developer with 3 years of experience. Visit his portfolio website to see his work and learn more about his skills',
+        'image' => 'https://snehal.info/snehal/img/thumbnail.ico',
+        'referrer' => 'default',
+        'author' => 'Snehal Rajvansh',
+        'geo_position' => '22.351115;78.667743',
+        'geo_region' => 'IN',
+        'ICBM' => '22.351115, 78.667743',
+        'keywords' =>
+            'Snehal, portfolio, web development, resume, CV, skills, experience, contact snehal , Raj, Rajvansh, Snehal rajvansh, Snehal raj, rajvansh, snehal portfolio',
     ])
 
 
@@ -55,7 +57,7 @@
     <!-- color of address bar in mobile browser -->
     <meta name="theme-color" content="#2B2B35">
 
-     <meta name=”robots” content="all">
+    <meta name=”robots” content="all">
     <!-- favicon  -->
     <link rel="shortcut icon" href="{{ asset('img/thumbnail.ico') }}" type="image/x-icon">
     <!-- bootstrap css -->
@@ -87,12 +89,12 @@
             display: block;
             margin-top: 20px;
 
-       
+
         }
 
         .skillIcons {
-                padding: 50px;
-            }
+            padding: 50px;
+        }
 
     }
 
@@ -111,8 +113,8 @@
 </style>
 
 <body>
-        <!-- jquery js -->
-        <script src="{{ asset('js/plugins/jquery.min.js') }}"></script>
+    <!-- jquery js -->
+    <script src="{{ asset('js/plugins/jquery.min.js') }}"></script>
 
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KH627M5" height="0" width="0"
@@ -120,8 +122,97 @@
     <!-- End Google Tag Manager (noscript) -->
 
 
-    @yield('content')
+    <!-- app -->
+    <div class="art-app art-app-onepage clickable">
 
+        <!-- mobile top bar -->
+        <div class="art-mobile-top-bar"></div>
+
+        <!-- app wrapper -->
+        <div class="art-app-wrapper">
+
+            <!-- app container end -->
+            <div class="art-app-container">
+
+                <!-- info bar -->
+                <div class="art-info-bar" id="sidebarClass">
+
+                    @include('portfolio.sidebar')
+
+                </div>
+                <!-- info bar end -->
+
+                <!-- content -->
+                <div class="art-content" id="sidebarClass2">
+
+                    <!-- curtain -->
+                    <div class="art-curtain"></div>
+
+
+
+
+                    <!-- top background -->
+                    <div class="art-top-bg" style="background-image: url({{ asset('storage/img/bg.jpg') }})">
+                        <!-- overlay -->
+                        <div class="art-top-bg-overlay"></div>
+                        <!-- overlay end -->
+                    </div>
+                    <!-- top background end -->
+
+                    <!-- swup container -->
+                    <div class="transition-fade" id="swup">
+
+                        <!-- scroll frame -->
+                        <div id="scrollbar" class="art-scroll-frame">
+
+                            @yield('content')
+
+                            <!-- container -->
+                            <div class="container-fluid">
+
+                                <!-- footer -->
+                                <footer>
+                                    <!-- copyright -->
+                                    <div class="art-copy"><a data-no-swup href="{{route('privacy-Policy')}}">© 2023 Snehal Rajvansh </a></div>
+                                    <!-- author ( Please! Do not delete it. You are awesome! :) -->
+                                    <div>Template author:&#160; Snehal Rajvansh</div>
+                                </footer>
+                                <!-- footer end -->
+
+                            </div>
+                            <!-- container end -->
+
+                        </div>
+                        <!-- scroll frame end -->
+
+                    </div>
+                    <!-- swup container end -->
+
+                </div>
+                <!-- content end -->
+
+
+
+            </div>
+            <!-- app container end -->
+
+        </div>
+        <!-- app wrapper end -->
+
+        <!-- preloader -->
+        <div class="art-preloader">
+            <!-- preloader content -->
+            <div class="art-preloader-content">
+                <!-- title -->
+                <h4>Snehal Rajvansh</h4>
+                <!-- progressbar -->
+                <div id="preloader" class="art-preloader-load"></div>
+            </div>
+            <!-- preloader content end -->
+        </div>
+        <!-- preloader end -->
+
+    </div>
 
     {{-- @livewireScripts --}}
 
