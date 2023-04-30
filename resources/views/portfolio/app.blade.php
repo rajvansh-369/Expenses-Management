@@ -50,6 +50,9 @@
     ])
 
 
+  <!-- favicon  -->
+  <link rel="shortcut icon" href="https://snehal.info/snehal/img/thumbnail.ico" type="image/x-icon">
+
     <!-- Required meta tags -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
