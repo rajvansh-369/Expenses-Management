@@ -50,8 +50,8 @@
     ])
 
 
-  <!-- favicon  -->
-  <link rel="shortcut icon" href="https://snehal.info/snehal/img/thumbnail.ico" type="image/x-icon">
+    <!-- favicon  -->
+    <link rel="shortcut icon" href="https://snehal.info/snehal/img/thumbnail.ico" type="image/x-icon">
 
     <!-- Required meta tags -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -176,7 +176,8 @@
                                 <!-- footer -->
                                 <footer>
                                     <!-- copyright -->
-                                    <div class="art-copy"><a data-no-swup href="{{route('privacy-Policy')}}">© 2023 Snehal Rajvansh </a></div>
+                                    <div class="art-copy"><a data-no-swup href="{{ route('privacy-Policy') }}">© 2023
+                                            Snehal Rajvansh </a></div>
                                     <!-- author ( Please! Do not delete it. You are awesome! :) -->
                                     <div>Template author:&#160; Snehal Rajvansh</div>
                                 </footer>
@@ -244,7 +245,6 @@
 
     <!-- main js -->
     <script src="{{ asset('js/main.js') }}"></script>
-
 
 </body>
 

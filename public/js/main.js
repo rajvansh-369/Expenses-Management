@@ -31,6 +31,19 @@ $(function() {
       renderByPixel: true,
       continuousScrolling: true,
     });
+
+
+    var slides = document.getElementsByTagName("pre");
+    for (var i = 0; i < slides.length; i++) {
+        (slides.item(i).classList.add("codeScroll"));
+
+    }
+
+    Scrollbar.init(document.querySelector('.codeScroll'), {
+        damping: 0.05,
+        renderByPixel: true,
+        continuousScrolling: true,
+    });
   
     // page loading
     $(document).ready(function() {
@@ -467,6 +480,9 @@ $(function() {
         renderByPixel: true,
         continuousScrolling: true,
       });
+
+  
+
   
       $("#form").submit(function() {
         $.ajax({
@@ -681,5 +697,10 @@ $(function() {
       element.classList.add("art-active");
       element2.classList.add("art-active");
     } 
-  
+
+
+
+    
+
+
   });
