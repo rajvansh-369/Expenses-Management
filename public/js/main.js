@@ -39,11 +39,16 @@ $(function() {
 
     }
 
-    Scrollbar.init(document.querySelector('.codeScroll'), {
+
+    if(document.getElementsByTagName("pre").length > 0){
+      Scrollbar.init(document.querySelector('.codeScroll'), {
         damping: 0.05,
         renderByPixel: true,
         continuousScrolling: true,
     });
+    }
+
+
   
     // page loading
     $(document).ready(function() {
