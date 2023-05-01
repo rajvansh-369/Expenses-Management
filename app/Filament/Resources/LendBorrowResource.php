@@ -25,6 +25,7 @@ class LendBorrowResource extends Resource
     protected static ?string $model = LendBorrow::class;
 
     protected static ?string $navigationIcon = 'ri-arrow-left-right-fill';
+    protected static ?string $navigationGroup = 'Expense Management';
 
 
     

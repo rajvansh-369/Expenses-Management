@@ -101,11 +101,11 @@
                     <!-- counter -->
                     <div class="art-counter-box">
                         <!-- counter number -->
-                        <!-- <span class="art-counter">114</span> -->
+                      {{-- <span class="art-counter">114</span> --}}
                     </div>
                     <!-- counter end -->
                     <!-- title -->
-                    <!-- <h6>Happy Customers</h6> -->
+                    <a target="_blank" data-no-swup href="{{url('blog')}}"><h2>Blogs</h2></a> 
                 </div>
                 <!-- couner frame end -->
 
@@ -172,12 +172,20 @@
                         <div class="container">
                             <div class="row">
 
+
+
                                 @foreach ($projects as $poject)
                                     <div class="col-md-3 ">
 
                                         <div class="wraps">
-                                            <iframe class="frames" src="{{ $poject->project_url }}"
-                                                frameborder="0"></iframe>
+                                            @if ($poject->project_url)
+                                                <iframe class="frames" src="{{ $poject->project_url }}"
+                                                    frameborder="0"></iframe>
+                                            @else
+                                                <img src="{{ asset('storage/'. $poject->img) }}" alt="{{$poject->img}}" width="263px">
+                                            @endif
+
+
                                         </div>
                                         <a target="_blank" data-no-swup href="{{ $poject->project_url }}">
                                             <h5 class="projectName text-center">
@@ -826,8 +834,8 @@
                             <!-- testimonial body -->
                             <div class="testimonial-body">
                                 <!-- photo -->
-                                <img class="art-testimonial-face" src="{{ asset('storage/img/testimonials/face-4.jpg') }}"
-                                    alt="face">
+                                <img class="art-testimonial-face"
+                                    src="{{ asset('storage/img/testimonials/face-4.jpg') }}" alt="face">
                                 <!-- name -->
                                 <h5>Paul Trueman</h5>
                                 <div class="art-el-suptitle mb-15">Template author</div>

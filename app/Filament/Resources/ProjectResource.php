@@ -6,6 +6,7 @@ use App\Filament\Resources\ProjectResource\Pages;
 use App\Filament\Resources\ProjectResource\RelationManagers;
 use App\Models\Project;
 use Filament\Forms;
+use Filament\Forms\Components\FileUpload;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
@@ -18,6 +19,7 @@ class ProjectResource extends Resource
     protected static ?string $model = Project::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationGroup = 'Portfolio';
 
     public static function form(Form $form): Form
     {
@@ -27,8 +29,9 @@ class ProjectResource extends Resource
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('project_url')
-                    ->required()
                     ->maxLength(255),
+                    FileUpload::make('img')
+                    ->directory('projects'),
                 Forms\Components\MarkdownEditor::make('project_description')
                     ->required()
                     ->maxLength(255),
