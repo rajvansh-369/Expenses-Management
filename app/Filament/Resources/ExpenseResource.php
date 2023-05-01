@@ -30,6 +30,7 @@ class ExpenseResource extends Resource
     // protected static ?string $model = Expense::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-currency-rupee';
+    protected static ?string $navigationGroup = 'Expense Management';
 
 
     public static function getEloquentQuery(): Builder
