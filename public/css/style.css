@@ -2813,3 +2813,11 @@ html.is-animating .fade-left {
             transform: scale(1); } }
 /*# sourceMappingURL=style.css.map */
 
+
+h1.font-bold.text-gray-700.dark\:text-gray-100.hover\:underline {
+  font-size: inherit;
+}
+
+h2.text-2xl.lg\:text-4xl.font-semibold.text-gray-100.leading-tight {
+  font-size: inherit;
+}
