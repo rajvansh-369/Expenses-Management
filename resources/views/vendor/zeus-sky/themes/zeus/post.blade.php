@@ -9,16 +9,18 @@
         </li>
     </x-slot>
 
-    @if($post->image() !== null)
-        <img alt="{{ $post->title }}" src="{{ $post->image() }}" class="my-10 w-full h-full shadow-md rounded-[2rem] rounded-bl-none z-0 object-cover"/>
+    @if ($post->image() !== null)
+        <img alt="{{ $post->title }}" src="{{ $post->image() }}"
+            class="my-10 w-full h-full shadow-md rounded-[2rem] rounded-bl-none z-0 object-cover" />
     @endif
 
     <div class="bg-dark dark:bg-gray-800 rounded-[2rem] rounded-tl-none shadow-md px-10 pb-6">
         <div class="flex items-center justify-between">
-            <span class="font-light text-gray-600 dark:text-gray-200">{{ optional($post->published_at)->diffForHumans() ?? '' }}</span>
+            <span
+                class="font-light text-gray-600 dark:text-gray-200">{{ optional($post->published_at)->diffForHumans() ?? '' }}</span>
             <div>
                 @unless ($post->tags->isEmpty())
-                    @each($theme.'.partial.category', $post->tags->where('type','category'), 'category')
+                    @each($theme . '.partial.category', $post->tags->where('type', 'category'), 'category')
                 @endunless
             </div>
         </div>
@@ -33,15 +35,17 @@
                 </p>
                 <div>
                     @unless ($post->tags->isEmpty())
-                        @foreach($post->tags->where('type','tag') as $tag)
-                            @include($theme.'.partial.tag')
+                        @foreach ($post->tags->where('type', 'tag') as $tag)
+                            @include($theme . '.partial.tag')
                         @endforeach
                     @endunless
                 </div>
             </div>
             <a href="#" class="flex items-center gap-2">
-                <img src="{{ \Filament\Facades\Filament::getUserAvatarUrl($post->author) }}" alt="avatar" class="object-cover w-10 h-10 rounded-full sm:block">
-                <h1 class="font-bold text-gray-700 dark:text-gray-100 hover:underline">{{ $post->author->name ?? '' }}</h1>
+                <img src="{{ \Filament\Facades\Filament::getUserAvatarUrl($post->author) }}" alt="avatar"
+                    class="object-cover w-10 h-10 rounded-full sm:block">
+                <h1 class="font-bold text-gray-700 dark:text-gray-100 hover:underline">{{ $post->author->name ?? '' }}
+                </h1>
             </a>
         </div>
 
@@ -54,9 +58,16 @@
         <h1 class="text-xl font-bold text-gray-700 dark:text-gray-100 md:text-2xl">{{ __('Related Posts') }}</h1>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            @foreach($related as $post)
-                @include($theme.'.partial.related')
+            @foreach ($related as $post)
+                @include($theme . '.partial.related')
             @endforeach
         </div>
     </div>
+    <script src="{{ asset('js/plugins/smooth-scrollbar.min.js') }}"></script>
+    <script>
+
+
+
+    
+    </script>
 </div>
