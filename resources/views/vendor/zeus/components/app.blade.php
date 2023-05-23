@@ -52,6 +52,7 @@
 
                     <div class="container mx-auto">
                         {{ $slot }}
+                       
                     </div>
 
 
@@ -60,7 +61,6 @@
 
 
         </div>
-  
     @endsection
 
     <script src="{{ asset('vendor/zeus/app.js') }}" defer></script>
@@ -71,7 +71,7 @@
 
     <script>
         const theme = localStorage.getItem('theme')
-
+        document.documentElement.classList.add('dark')
         if ((theme === 'dark') || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark')
         }

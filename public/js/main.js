@@ -1,13 +1,4 @@
-/* -------------------------------------------
 
-Name: 		Arter
-Version:  1.0
-Author:		Nazar Miller (millerDigitalDesign)
-Portfolio:  https://themeforest.net/user/millerdigitaldesign/portfolio?ref=MillerDigitalDesign
-
-p.s. I am availableee for Freelance hire (UI design, web development). mail: miller.themes@gmail.com
-
-------------------------------------------- */
 $(function() {
 
     "use strict";
@@ -22,16 +13,15 @@ $(function() {
     // scrollbar
     Scrollbar.use(OverscrollPlugin);
     Scrollbar.init(document.querySelector('#scrollbar'), {
-      damping: 0.05,
+      damping: 0.25,
       renderByPixel: true,
       continuousScrolling: true,
     });
     Scrollbar.init(document.querySelector('#scrollbar2'), {
-      damping: 0.05,
+      damping: 0.25,
       renderByPixel: true,
       continuousScrolling: true,
     });
-
 
     var slides = document.getElementsByTagName("pre");
     for (var i = 0; i < slides.length; i++) {
@@ -39,13 +29,13 @@ $(function() {
 
     }
 
-
-    if(document.getElementsByTagName("pre").length > 0){
-      Scrollbar.init(document.querySelector('.codeScroll'), {
-        damping: 0.05,
-        renderByPixel: true,
-        continuousScrolling: true,
-    });
+    console.log("asdasdasd");
+    if (document.getElementsByTagName("pre").length > 0) {
+        Scrollbar.init(document.querySelector('.codeScroll'), {
+            damping: 0.25,
+            renderByPixel: true,
+            continuousScrolling: true,
+        });
     }
 
 
@@ -471,22 +461,41 @@ $(function() {
   
       Scrollbar.use(OverscrollPlugin);
       Scrollbar.init(document.querySelector('#scrollbar'), {
-        damping: 0.05,
+        damping: 0.25,
         renderByPixel: true,
         continuousScrolling: true,
       });
       Scrollbar.init(document.querySelector('#scrollbar2'), {
-        damping: 0.05,
+        damping: 0.25,
         renderByPixel: true,
         continuousScrolling: true,
       });
-      Scrollbar.init(document.querySelector('#scrollbar3'), {
-        damping: 0.05,
-        renderByPixel: true,
-        continuousScrolling: true,
-      });
+      // Scrollbar.init(document.querySelector('#scrollbar3'), {
+      //   damping: 0.25,
+      //   renderByPixel: true,
+      //   continuousScrolling: true,
+      // });
 
-  
+      var slides = document.getElementsByTagName("pre");
+    for (var i = 0; i < slides.length; i++) {
+        (slides.item(i).classList.add("codeScroll"));
+
+    }
+    Scrollbar.init(document.querySelector('.language-php'), {
+      damping: 0.25,
+      renderByPixel: true,
+      continuousScrolling: true,
+  });
+
+    console.log("asdasdasd");
+    console.log(document.getElementsByTagName("pre").length);
+    if (document.getElementsByTagName("pre").length > 0) {
+        Scrollbar.init(document.querySelector('.codeScroll'), {
+            damping: 0.25,
+            renderByPixel: true,
+            continuousScrolling: true,
+        });
+    }
 
   
       $("#form").submit(function() {
