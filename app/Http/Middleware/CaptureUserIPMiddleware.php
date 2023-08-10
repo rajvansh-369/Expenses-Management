@@ -19,13 +19,13 @@ class CaptureUserIPMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        $storedIP = Session::get('stored_ips', []);
+        $storedIPs = Session::get('stored_ips', []);
 
         // dd(in_array($request->ip(), $storedIPs));
         $userIpAddress = $request->ip();;
         // $userIpAddress = "137.96.143.251";
         // dd($userIpAddress);
-        if (!in_array($request->ip(), $storedIP)) {
+        if (!in_array($request->ip(), $storedIPs)) {
 
             $geoData = Http::get('http://ip-api.com/json/' . $userIpAddress)->json();
             // if ($geoData && $geoData['status'] === 'success') {
