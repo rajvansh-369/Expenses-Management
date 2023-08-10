@@ -23,7 +23,7 @@ class CaptureUserIPMiddleware
 
         // dd(in_array($request->ip(), $storedIPs));
         $userIpAddress = $request->ip();;
-        $userIpAddress = "137.96.143.251";
+        // $userIpAddress = "137.96.143.251";
         // dd($userIpAddress);
         if (!in_array($request->ip(), $storedIPs)) {
 
