@@ -176,7 +176,7 @@
 
                                 @foreach ($projects as $poject)
                                     <div class="col-md-3 ">
-
+                                     <a target="_blank" data-no-swup href="{{ $poject->project_url }}">
                                         <div class="wraps">
                                             @if (!$poject->img)
                                                 <iframe class="frames" src="{{ $poject->project_url }}"
@@ -187,11 +187,11 @@
 
 
                                         </div>
-                                        <a target="_blank" data-no-swup href="{{ $poject->project_url }}">
+
                                             <h5 class="projectName text-center">
                                                 {{ $poject->project_name }}</h5>
                                             <p class="projectName ">
-                                                {{ substr($poject->project_description, 0, 100) }}...
+                                        {{ substr($poject->project_description, 0, 100) }}  {{ (str_word_count($poject->project_description) > 100) ? ...   : ""}}
                                             </p>
                                         </a>
                                     </div>
