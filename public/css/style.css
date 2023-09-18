@@ -111,6 +111,7 @@ common
 
 .wraps img{
     padding-left: 25px !important;
+    min-height: 142px;
 }
 
 
