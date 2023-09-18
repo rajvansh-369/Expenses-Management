@@ -105,7 +105,7 @@
                     </div>
                     <!-- counter end -->
                     <!-- title -->
-                    <a target="_blank" data-no-swup href="{{url('blog')}}"><h2>Blogs</h2></a> 
+                    <a target="_blank" data-no-swup href="{{url('blog')}}"><h2>Blogs</h2></a>
                 </div>
                 <!-- couner frame end -->
 
@@ -178,7 +178,7 @@
                                     <div class="col-md-3 ">
 
                                         <div class="wraps">
-                                            @if ($poject->project_url)
+                                            @if (!$poject->img)
                                                 <iframe class="frames" src="{{ $poject->project_url }}"
                                                     frameborder="0"></iframe>
                                             @else
