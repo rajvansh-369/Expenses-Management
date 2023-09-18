@@ -191,7 +191,7 @@
                                             <h5 class="projectName text-center">
                                                 {{ $poject->project_name }}</h5>
                                             <p class="projectName ">
-                                        {{ substr($poject->project_description, 0, 100) }}  {{ (str_word_count($poject->project_description) > 100) ? ...   : ""}}
+                                        {{ substr($poject->project_description, 0, 100) }}  {{ (str_word_count($poject->project_description) > 100) ? "..."   : ""}}
                                             </p>
                                         </a>
                                     </div>
