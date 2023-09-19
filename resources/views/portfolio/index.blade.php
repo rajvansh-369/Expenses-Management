@@ -20,7 +20,7 @@
                         <!-- main title -->
                         <div class="art-banner-title">
                             <!-- title -->
-                            <h1 class="mb-15">Hi, I'm a Software <br>Developer</h1>
+                            <h2 class="mb-15">Hi, I'm Snehal Rajvansh <br> a Software Developer</h2>
                             <!-- suptitle -->
                             <div class="art-lg-text art-code mb-25">&lt;<i>code</i>&gt; I code
                                 <span class="txt-rotate" data-period="2000"
