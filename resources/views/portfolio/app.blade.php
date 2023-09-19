@@ -36,9 +36,9 @@
     <!-- End Google Tag Manager -->
 
     @include('meta::manager', [
-        'title' => 'Snehal Rajvansh | Portfolio',
+        'title' => 'Snehal Rajvansh | Portfolio | Resume',
         'description' =>
-            'Snehal is a software developer with 3 years of experience. Visit his portfolio website to see his work and learn more about his skills',
+            'Snehal Rajvansh is a software developer with 3 years of experience. Visit his portfolio website to see his work and learn more about his skills',
         'image' => 'https://snehal.info/snehal/img/thumbnail.ico',
         'referrer' => 'default',
         'author' => 'Snehal Rajvansh',
@@ -46,7 +46,7 @@
         'geo_region' => 'IN',
         'ICBM' => '22.351115, 78.667743',
         'keywords' =>
-            'Snehal, portfolio, web development, resume, CV, skills, experience, contact snehal , Raj, Rajvansh, Snehal rajvansh, Snehal raj, rajvansh, snehal portfolio',
+            'snehal rajvansh, snehal linkedin portfolio, web development, resume, CV, skills, experience, contact snehal ,rajvansh, Snehal rajvansh, Snehal raj, snehal portfolio',
     ])
 
 
