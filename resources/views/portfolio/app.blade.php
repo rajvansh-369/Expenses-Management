@@ -46,7 +46,7 @@
         'geo_region' => 'IN',
         'ICBM' => '22.351115, 78.667743',
         'keywords' =>
-            'snehal rajvansh, snehal linkedin portfolio, web development, resume, CV, skills, experience, contact snehal ,rajvansh, Snehal rajvansh, Snehal raj, snehal portfolio',
+            'snehal rajvansh, snehal linkedin, portfolio, web development, resume, CV, skills, experience, contact snehal ,rajvansh, Snehal rajvansh, Snehal raj, snehal portfolio',
     ])
 
 
