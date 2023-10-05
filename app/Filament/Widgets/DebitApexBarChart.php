@@ -40,10 +40,10 @@ class DebitApexBarChart extends ApexChartWidget
 
         if($this->filter == 1){
            $filterByHomeDebit = "1";
-           $filterByColumn = 'home_transaction'; 
+           $filterByColumn = 'home_transaction';
         }elseif($this->filter == 2){
             $filterByHomeDebit = "0";
-            $filterByColumn = 'home_transaction'; 
+            $filterByColumn = 'home_transaction';
         }else{
             $filterByHomeDebit = auth()->user()->id;
             $filterByColumn = 'user_id';
@@ -51,13 +51,13 @@ class DebitApexBarChart extends ApexChartWidget
 
         // $startDate = ;
         // $nowDate = ;
-     
-     
-        $startDate = Carbon::createFromFormat('Y-m-d', '2022-12-01');
+
+
+        $startDate = Carbon::createFromFormat('Y-m-d', '2023-10-01');
         $endtDate = Carbon::now();
          $totalDays =  $endtDate->diffInDays($startDate);
 
-           
+
         $data = Trend::query(Expense::where('pos_neg', 1)->where('user_id', auth()->user()->id)->where($filterByColumn, $filterByHomeDebit))
         ->between(
             start: now()->startOfMonth()->subDay($totalDays ),
@@ -66,7 +66,7 @@ class DebitApexBarChart extends ApexChartWidget
         ->perMonth()
         ->sum('amount');
         // dd( $data);
-          
+
         return [
             'chart' => [
                 'type' => 'bar',
@@ -135,7 +135,7 @@ class DebitApexBarChart extends ApexChartWidget
             0 => 'Current',
             1  => 'To Home',
             2  => 'Except Home',
-             
+
         ];
     }
 }

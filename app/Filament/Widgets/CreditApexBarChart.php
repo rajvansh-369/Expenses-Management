@@ -41,17 +41,17 @@ class CreditApexBarChart extends ApexChartWidget
 
         if($this->filter == 1){
            $filterByHomeDebit = "1";
-           $filterByColumn = 'home_transaction'; 
+           $filterByColumn = 'home_transaction';
         }elseif($this->filter == 2){
             $filterByHomeDebit = "0";
-            $filterByColumn = 'home_transaction'; 
+            $filterByColumn = 'home_transaction';
         }else{
             $filterByHomeDebit = auth()->user()->id;
             $filterByColumn = 'user_id';
         }
 
 
-        $startDate = Carbon::createFromFormat('Y-m-d', '2022-12-01');
+        $startDate = Carbon::createFromFormat('Y-m-d', '2023-10-01');
         $endtDate = Carbon::now();
          $totalDays =  $endtDate->diffInDays($startDate);
 
@@ -133,8 +133,8 @@ class CreditApexBarChart extends ApexChartWidget
             1  => 'From Home',
             2  => 'Except From Home',
 
-           
-             
+
+
         ];
     }
 }
