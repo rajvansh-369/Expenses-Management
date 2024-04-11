@@ -51,7 +51,7 @@ class CreditApexBarChart extends ApexChartWidget
         }
 
 
-        $startDate = Carbon::createFromFormat('Y-m-d', '2023-10-01');
+        $startDate = Carbon::createFromFormat('Y-m-d', '2024-04-01');
         $endtDate = Carbon::now();
          $totalDays =  $endtDate->diffInDays($startDate);
 
