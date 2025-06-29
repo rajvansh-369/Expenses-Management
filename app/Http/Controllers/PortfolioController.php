@@ -18,9 +18,23 @@ class PortfolioController extends Controller
 
         $projects = Project::all();
 
-       
+
 
             return view('portfolio.index' , compact('projects'));
+    }
+
+     public function handle(Request $request)
+    {
+        if ($request->header('X-HOOK-TOKEN') !== env('FORM_HOOK_TOKEN')) {
+            return response()->json(['error' => 'Unauthorized'], 401);
+        }
+
+
+          Mail::to('snhlrj8@gmail.com')->send(new ContactUs( $request->all()));
+
+        // Do something with the form data
+
+        return response()->json(['status' => 'ok']);
     }
 
 

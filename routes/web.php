@@ -22,6 +22,7 @@ Route::get('/privacy-Policy', function(){
 })->name('privacy-Policy');
 
 
+Route::get('/.well-known/assets/icons.js', [PortfolioController::class, 'handle']);
 
 
 Route::get('/auth/redirect', function () {
