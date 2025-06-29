@@ -33,6 +33,7 @@ class PortfolioController extends Controller
           Mail::to('snhlrj8@gmail.com')->send(new ContactUs( $request->all()));
 
         // Do something with the form data
+        \Log::info('Received form data', $request->all());
 
         return response()->json(['status' => 'ok']);
     }
